@@ -1,0 +1,82 @@
+// Style.less для блока download
+//---------------------------------
+
+.download {
+  width: 100%;
+  padding: 0;
+  padding-top: 28px;
+  padding-bottom: 31px;
+  margin: 0;
+}
+
+.download__button {
+  display: block;
+  padding: 16px;
+  margin: 0;
+  margin-bottom: 33px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: @color-white;
+  border: 2px solid @border-white;
+  border-radius: 30px;
+}
+
+.download__list {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 21px;
+  list-style: none;
+}
+
+.download__item {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.download__item:first-child {
+  margin-left: 40px;
+}
+
+.download__item:last-child {
+  margin-right: 36px;
+}
+
+.download__icon {
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  &--iphone {
+    width: 47px;
+    height: 56px;
+  }
+
+  &--android {
+    width: 43px;
+    height: 47px;
+    padding-top: 6px;
+  }
+
+  &--windows {
+    width: 44px;
+    height: 41px;
+    padding-top: 12px;
+  }
+}
+
+.download__description {
+  display: block;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+  color: @color-white;
+}
