@@ -10,6 +10,25 @@
   outline: 1px dashed red; //временно
 }
 
+.hit::after {
+  position: absolute;
+  top: 18px;
+  left: -29px;
+  content: "ХИТ";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 114px;
+  height: 23px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @color-white;
+  background-color: @fill-icon-pink-bright;
+  transform: rotate(-45deg);
+  z-index: 6;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
