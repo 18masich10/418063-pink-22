@@ -1,18 +1,20 @@
 // Style.less для блока logo
-//---------------------------------
+//--------------------------
 
 .logo {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 22px 1px;
-  margin: 0;
 }
 
 .logo__text {
   display: block;
   width: 74px;
   height: 23px;
-  fill: @fill-icon-white;
+
+  &--header {
+    fill: @fill-icon-white;
+  }
+
+  &--footer {
+    fill: @fill-icon-blue-darker;
+  }
 }
