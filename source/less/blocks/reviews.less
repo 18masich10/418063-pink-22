@@ -1,0 +1,78 @@
+// Style.less для блока reviews
+//-----------------------------
+
+.reviews {
+  display: block;
+  background-color: @bg-white;
+}
+
+.reviews__wrapper {
+  position: relative;
+  display: block;
+  padding: 0;
+  padding-top: 41px;
+  padding-bottom: 79px;
+}
+
+.reviews__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.reviews__autor {
+  padding: 0;
+  margin: 0;
+
+  &--top {
+    display: block;
+    margin-bottom: 13px;
+  }
+
+  &--bottom {
+    display: none;
+  }
+}
+
+.reviews__autor-name {
+  display: block;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: @color-black;
+  text-align: center;
+}
+
+.reviews__text {
+  display: block;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.reviews__control {
+  display: none;
+}
+
+.reviews__toggles {
+  position: absolute;
+  top: 284px;
+  left: 110px;
+  display: block;
+  margin: 0 auto;
+}

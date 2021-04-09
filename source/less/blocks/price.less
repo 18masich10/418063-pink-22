@@ -1,0 +1,104 @@
+// Style.less для блока price
+//---------------------------
+
+.price {
+  display: block;
+  background-color: @bg-gray-lighter;
+}
+
+.price__wrapper {
+  position: relative;
+  display: block;
+  padding: 0;
+  padding-top: 96px;
+  padding-bottom: 104px;
+}
+
+.price__list {
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  outline: 1px solid @border-gray-light;
+}
+
+.price__row {
+  display: flex;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @color-blue-darker;
+  outline: 1px solid @border-gray-light;
+}
+
+.price__tariff {
+  outline: 1px solid @border-gray-light;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 235px;
+  padding: 17px 0 21px 0;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-white;
+  background-color: @bg-blue-darker;
+  overflow: hidden;
+}
+
+.price__tariff:first-child {
+  background-color: @bg-gray-lighter;
+}
+
+.price__tariff span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.price__option {
+  width: 193px;
+  padding: 14px 21px 17px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: initial;
+}
+
+.price__status {
+  position: relative;
+  width: 233px;
+  text-align: center;
+  background-repeat: no-repeat;
+  outline: 1px dashed red; // временно
+
+  &--selected::after {
+    position: absolute;
+    content: " ";
+    top: 19px;
+    left: 102px;
+    width: 31px;
+    height: 21px;
+    background-image: url("../img/price/yes.svg");
+  }
+
+  &--not-selected::after {
+    position: absolute;
+    content: " ";
+    top: 16px;
+    left: 103px;
+    width: 27px;
+    height: 27px;
+    background-image: url("../img/price/no.svg");
+  }
+}
+
+.price__toggles {
+  position: absolute;
+  top: 412px;
+  left: 461px;
+  display: block;
+  margin: 0 auto;
+}
