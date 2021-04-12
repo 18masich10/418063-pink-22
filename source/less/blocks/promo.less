@@ -13,21 +13,47 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding: 0;
-  padding-top: 23px;
+
+  &--index::before {
+    display: block;
+    position: absolute;
+    content: " ";
+    top: -67px;
+    left: -19px;
+    width: 320px;
+    height: 462px;
+    background-image: url("../img/promo/bg-promo-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 320px auto;
+    z-index: -1;
+  }
+
+  &--form::before {
+    display: block;
+    position: absolute;
+    content: " ";
+    top: -67px;
+    left: -19px;
+    width: 320px;
+    height: 240px;
+    background-image: url("../img/promo/bg-promo-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 320px auto;
+    z-index: -1;
+  }
 }
 
-.promo__wrapper::before {
-  display: block;
-  position: absolute;
-  content: " ";
-  top: -67px;
-  left: -19px;
-  width: 320px;
-  height: 462px;
-  background-image: url("../img/promo/bg-promo-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 320px auto;
-  z-index: -1;
+.promo__title {
+  width: 280px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 33px;
+  padding: 0;
+  padding-top: 28px;
+  margin: 0;
+  margin-bottom: 44px;
+  text-align: center;
+  color: @color-white;
 }
 
 .promo__slogan {
@@ -36,6 +62,7 @@
   font-weight: 300;
   line-height: 120%;
   padding: 0;
+  padding-top: 24px;
   margin: 0;
   margin-bottom: 29px;
   text-align: center;

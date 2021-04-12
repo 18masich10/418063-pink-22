@@ -1,0 +1,211 @@
+// Style.less для блока contest
+//---------------------------------
+
+.contest {
+  display: block;
+  background-color: @bg-white;
+}
+
+.contest__wrapper {
+  padding: 44px 0 0 0;
+}
+
+.contest__title {
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.contest__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  &--progress {
+    border: none;
+  }
+}
+
+.contest__fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 44px;
+  border: none;
+
+  &--feeling {
+    margin-bottom: 47px;
+  }
+}
+
+.contest__legend {
+  width: 240px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-pink-bright;
+
+  &--progress,
+  &--device {
+    padding-top: 38px;
+    margin-bottom: 42px;
+  }
+
+  &--contacts-data {
+    padding: 0;
+    margin: 0;
+  }
+
+  &--feeling {
+    padding-top: 14px;
+    margin-bottom: 16px;
+  }
+}
+
+.contest__fieldset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.contest__fieldset-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.contest__fieldset-item:last-child {
+  margin-bottom: 0;
+}
+
+.contest__label {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  line-height: 30px;
+
+  &--data,
+  &--contacts-data {
+    padding-left: 25px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: @color-pink-bright;
+  }
+
+  &--progress {
+    padding-left: 60px;
+    margin-bottom: 34px;
+    font-size: 18px;
+  }
+
+  &--device {
+    padding-left: 71px;
+    margin-bottom: 26px;
+    font-size: 18px;
+  }
+}
+
+.contest__input {
+  width: 256px;
+  padding: 23px 0 19px 21px;
+  margin: 0;
+  border: 2px solid @border-gray-light;
+  border-radius: 1px;
+
+  &--checkbox + label::after {
+    position: absolute;
+    content: " ";
+    left: 1px;
+    top: -4px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid @border-gray-light;
+    border-radius: 1px;
+  }
+
+  &--checkbox:checked + label::before {
+    position: absolute;
+    content: " ";
+    left: 10px;
+    top: 7px;
+    width: 22px;
+    height: 16px;
+    background-image: url("../img/custom-icon/tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--radio + label::after {
+    position: absolute;
+    content: " ";
+    left: 1px;
+    top: -6px;
+    width: 37px;
+    height: 37px;
+    border: 2px solid @border-gray-light;
+    border-radius: 50%;
+  }
+
+  &--radio:checked + label::before {
+    position: absolute;
+    content: " ";
+    left: 14px;
+    top: 6px;
+    width: 15px;
+    height: 15px;
+    background-color: @fill-icon-pink-bright;
+    border-radius: 50%;
+  }
+
+  &--feeling {
+    padding-top: 13px;
+    padding-left: 21px;
+    padding-bottom: 24px;
+  }
+}
+
+.contest__input::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: @bg-blue-darker;
+}
+
+.contest__button {
+  padding: 17px 5px;
+  margin: 0;
+  margin-bottom: 37px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: @color-white;
+  background-color: @bg-btn-green;
+  border: none;
+}
+
+.contest__input-description {
+  padding: 0;
+  padding-left: 50px;
+  margin: 0;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+
+  span {
+    color: @color-pink-bright;
+  }
+}
