@@ -2,6 +2,7 @@
 //---------------------------------
 
 .main-nav {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -10,8 +11,34 @@
 
 .main-nav__toggle {
   display: block;
+  fill: @fill-icon-white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.main-nav__wrapper {
-  display: none;
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/custom-icon/open-menu-btn.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: -46px;
+  right: -28px;
+  display: block;
+  width: 50px;
+  height: 24px;
+  background-image: url("../img/custom-icon/close-menu-btn.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav__list {
+  display: block;
 }

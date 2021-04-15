@@ -1,0 +1,102 @@
+// Style.less для блока publication
+//---------------------------------
+
+.publication__item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  background-color: @bg-gray-lighter;
+}
+
+.publication__item:last-child {
+  margin-bottom: 0;
+}
+
+.publication__img {
+  display: block;
+  width: 280px;
+  height: 180px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 17px;
+
+  &--panorama {
+    width: 320px;
+    height: 137px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.publication__hit {
+  position: absolute;
+  content: " ";
+  right: 1px;
+  top: 0;
+  display: block;
+  width: 120px;
+  padding: 6px 9px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-white;
+  background-color: @bg-btn-pink-bright;
+}
+
+.publication__author {
+  padding: 0;
+  padding-top: 1px;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.publication__author-name {
+  padding: 0;
+  padding-left: 17px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+
+  span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+.publication__author-description {
+  width: 260px;
+  padding: 0 0 0 17px;
+  margin: 0;
+}
+
+.publication__like {
+  position: relative;
+  display: block;
+  padding: 0;
+  padding-bottom: 18px;
+  margin: 0;
+
+  p {
+    padding: 0;
+    padding-left: 49px;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: @color-pink-bright;
+  }
+}
+
+.publication__like::after {
+  position: absolute;
+  content: " ";
+  left: 17px;
+  top: 5px;
+  display: block;
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/custom-icon/heart.svg");
+}
