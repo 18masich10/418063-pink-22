@@ -10,14 +10,49 @@
 .page-header__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+}
+
+.page-header__logo-link {
+  display: block;
+  width: 50%;
+  padding: 23px 20px;
 }
 
 .page-header__logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
-  padding: 23px 0;
+  padding: 0;
   margin: 0;
+
+  img {
+    width: 74px;
+    height: 23px;
+  }
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .page-header__logo-link {
+    display: block;
+    width: 50%;
+    padding: 23px 20px 39px;
+  }
+
+  .page-header__logo {
+    padding: 4px 0;
+    margin: 0;
+
+    img {
+      width: 145px;
+      height: 40px;
+    }
+  }
 }

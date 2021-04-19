@@ -12,19 +12,22 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
   padding: 0;
+  padding-top: 28px;
+  padding-bottom: 77px;
 
   &--index::before {
     display: block;
     position: absolute;
     content: " ";
     top: -65px;
-    left: -19px;
-    width: 320px;
+    width: 100%;
     height: 462px;
     background-image: url("../img/promo/bg-promo-mobile.png");
     background-repeat: no-repeat;
-    background-size: 320px auto;
+    background-size: cover;
     z-index: -1;
   }
 
@@ -33,12 +36,11 @@
     position: absolute;
     content: " ";
     top: -67px;
-    left: -19px;
-    width: 320px;
+    width: 100%;
     height: 240px;
     background-image: url("../img/promo/bg-promo-mobile.png");
     background-repeat: no-repeat;
-    background-size: 320px auto;
+    background-size: cover;
     z-index: -1;
   }
 
@@ -47,12 +49,11 @@
     position: absolute;
     content: " ";
     top: -67px;
-    left: -19px;
-    width: 320px;
+    width: 100%;
     height: 239px;
     background-image: url("../img/promo/bg-promo-mobile.png");
     background-repeat: no-repeat;
-    background-size: 320px auto;
+    background-size: cover;
     z-index: -1;
   }
 }
@@ -63,18 +64,9 @@
   font-weight: 300;
   line-height: 33px;
   padding: 0;
-  padding-top: 28px;
   margin: 0;
   text-align: center;
   color: @color-white;
-
-  &--form {
-    margin-bottom: 44px;
-  }
-
-  &--catalog {
-    margin-bottom: 77px;
-  }
 }
 
 .promo__slogan {
@@ -105,4 +97,30 @@
   height: 286px;
   padding: 0;
   margin: 0;
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .promo__wrapper {
+    padding-top: 65px;
+    padding-bottom: 127px;
+
+    &--index::before {
+      height: 462px;
+    }
+
+    &--form::before {
+      height: 395px;
+    }
+
+    &--catalog::before {
+      height: 395px;
+    }
+  }
+
+  .promo__title {
+    width: 480px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }

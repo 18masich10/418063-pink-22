@@ -7,14 +7,16 @@
 }
 
 .editor__wrapper {
-  padding: 18px 0 40px;
+  padding: 18px 0 41px;
 }
 
 .editor__img {
   display: block;
+  width: 280px;
+  height: 374px;
   padding: 0;
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
 }
 
 .editor__form {
@@ -28,20 +30,22 @@
 .editor__list-action {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin: 0 38px;
 }
 
 .editor__action {
   display: block;
   padding: 0;
   margin: 0;
-  margin-left: 12px;
-  margin-right: 23px;
+  margin-right: 35px;
   border: 0;
   background-color: transparent;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   path {
     fill: @fill-icon-blue-darker;
@@ -81,8 +85,10 @@
 .editor__filter {
   display: block;
   padding: 0;
+  padding-top: 19px;
+  padding-bottom: 19px;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   list-style: none;
   overflow: hidden;
 }
@@ -90,8 +96,7 @@
 .editor__filter-item {
   display: none;
   padding: 0;
-  padding-top: 35px;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
   margin: 0;
   border-bottom: 1px solid rgba(@bg-blue-darker, 0.1);
 }
@@ -103,9 +108,7 @@
 .editor__filter-scale {
   width: 238px;
   padding: 0;
-  margin: 0;
-  margin-left: 22px;
-  margin-bottom: 20px;
+  margin: 0 0 22px 22px;
   border: 1px solid @bg-scale;
 }
 
@@ -153,6 +156,8 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
 .editor__button {
@@ -170,7 +175,7 @@
   &--submit {
     padding-left: 88px;
     padding-right: 88px;
-    margin-bottom: 14px;
+    margin-bottom: 13px;
     color: @color-pink-bright;
     border: 3px solid @border-pink-bright;
   }
@@ -180,5 +185,112 @@
     padding-right: 101px;
     color: rgba(@color-blue-darker, 0.1);
     border: 3px solid rgba(@border-blue-darker, 0.1);
+  }
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .editor__wrapper {
+    display: grid;
+    grid-template-columns: 300px 275px;
+    column-gap: 45px;
+    padding: 57px 0 54px;
+  }
+
+  .editor__img {
+    width: 300px;
+    height: 400px;
+    margin: 0;
+  }
+
+  .editor__list-action {
+    display: none;
+  }
+
+  .editor__filter {
+    width: 275px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin-bottom: 12px;
+    overflow: inherit;
+  }
+
+  .editor__filter-item {
+    position: relative;
+    display: block;
+    padding-bottom: 34px;
+    margin-bottom: 35px;
+
+    &--crop::after {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+    }
+
+    //&--fill {
+    //left: 35px;
+    //}
+
+    //&--contrast {
+    //left: 115px;
+    //}
+  }
+
+  .editor__filter-scale {
+    width: 200px;
+    margin: 0 0 0 55px;
+  }
+
+  .editor__filter-toggle {
+    &--crop {
+      right: -13px;
+    }
+
+    &--fill {
+      left: 24px;
+    }
+
+    &--contrast {
+      left: 95px;
+    }
+  }
+
+  .editor__button-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .editor__button {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 15px 0;
+    margin: 0;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    &--submit {
+      padding-left: 88px;
+      padding-right: 88px;
+      margin-bottom: 13px;
+      color: @color-pink-bright;
+      border: 3px solid @border-pink-bright;
+    }
+
+    &--reset {
+      padding-left: 101px;
+      padding-right: 101px;
+      color: rgba(@color-blue-darker, 0.1);
+      border: 3px solid rgba(@border-blue-darker, 0.1);
+    }
   }
 }

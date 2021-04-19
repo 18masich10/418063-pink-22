@@ -7,10 +7,10 @@
   margin: 0;
   margin-bottom: 20px;
   background-color: @bg-gray-lighter;
-}
 
-.publication__item:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .publication__img {
@@ -19,7 +19,6 @@
   height: 180px;
   padding: 0;
   margin: 0;
-  margin-bottom: 17px;
 
   &--panorama {
     width: 320px;
@@ -32,11 +31,11 @@
 .publication__hit {
   position: absolute;
   content: " ";
-  right: 1px;
+  right: 0;
   top: 0;
   display: block;
   width: 120px;
-  padding: 6px 9px;
+  padding: 6px 10px;
   font-size: 12px;
   font-weight: 700;
   text-align: center;
@@ -45,16 +44,17 @@
   background-color: @bg-btn-pink-bright;
 }
 
-.publication__author {
-  padding: 0;
-  padding-top: 1px;
-  margin: 0;
-  margin-bottom: 11px;
+.publication__inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 18px 0;
 }
 
 .publication__author-name {
+  width: 240px;
   padding: 0;
-  padding-left: 17px;
+  padding-left: 18px;
   margin: 0;
   font-size: 14px;
   font-weight: 700;
@@ -69,34 +69,125 @@
 
 .publication__author-description {
   width: 260px;
-  padding: 0 0 0 17px;
+  min-height: 25px;
+  padding: 0;
+  padding-left: 18px;
   margin: 0;
+  margin-bottom: 11px;
 }
 
 .publication__like {
   position: relative;
   display: block;
   padding: 0;
-  padding-bottom: 18px;
+  padding-left: 50px;
   margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: @color-pink-bright;
 
-  p {
+  &::after {
+    position: absolute;
+    content: " ";
+    left: 17px;
+    top: 5px;
+    display: block;
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/custom-icon/heart.svg");
+  }
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .publication__inner {
+    padding: 23px 0;
+  }
+
+  .publication__author-name {
+    padding-left: 30px;
+  }
+
+  .publication__author-description {
+    width: 260px;
+    min-height: 47px;
+    padding-left: 30px;
+    margin-bottom: 13px;
+  }
+
+  .publication__like {
+    position: relative;
+    display: block;
+    width: 149px;
     padding: 0;
-    padding-left: 49px;
+    padding-left: 30px;
     margin: 0;
     font-size: 12px;
     text-transform: uppercase;
     color: @color-pink-bright;
-  }
-}
 
-.publication__like::after {
-  position: absolute;
-  content: " ";
-  left: 17px;
-  top: 5px;
-  display: block;
-  width: 13px;
-  height: 12px;
-  background-image: url("../img/custom-icon/heart.svg");
+    &::after {
+      left: 257px;
+      top: 5px;
+    }
+  }
+
+  .publication__item {
+    width: 300px;
+    padding: 0;
+    margin: 0;
+
+    &--leader {
+      width: 620px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-bottom: 30px;
+    }
+
+    &--leader .publication__inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--leader .publication__author-name {
+      order: 0;
+    }
+
+    &--leader .publication__author-description {
+      width: 590px;
+      //min-height: 50px;
+      margin: 0;
+      order: 1;
+    }
+
+    &--leader .publication__like {
+      width: 149px;
+      padding: 0;
+      padding-top: 2px;
+
+      &::after {
+        left: 106px;
+        top: 7px;
+      }
+    }
+  }
+
+  .publication__img {
+    display: block;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+
+    &--panorama {
+      width: 660px;
+      height: 509px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  .publication__hit {
+    top: 57px;
+  }
 }

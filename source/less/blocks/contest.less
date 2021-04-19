@@ -11,7 +11,7 @@
 }
 
 .contest__title {
-  width: 280px;
+  width: 278px;
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
@@ -19,6 +19,10 @@
   font-weight: 400;
   line-height: 30px;
   text-align: center;
+}
+
+.contest__subtitle {
+  display: none;
 }
 
 .contest__form {
@@ -100,7 +104,7 @@
 
   &--data,
   &--contacts-data {
-    padding-left: 25px;
+    padding-left: 24px;
     margin-bottom: 5px;
     font-size: 14px;
     text-transform: uppercase;
@@ -121,7 +125,7 @@
 }
 
 .contest__input {
-  width: 256px;
+  width: 255px;
   padding: 23px 0 19px 21px;
   margin: 0;
   border: 2px solid @border-gray-light;
@@ -207,5 +211,186 @@
 
   span {
     color: @color-pink-bright;
+  }
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .contest__wrapper {
+    padding: 91px 0 0 0;
+  }
+
+  .contest__title {
+    width: 560px;
+    padding: 0 30px;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .contest__subtitle {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 72px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .contest__fieldset {
+    width: 620px;
+
+    &--data {
+      margin-bottom: 7px;
+      order: -1;
+    }
+
+    &--progress {
+      order: 1;
+    }
+
+    &--contacts-data {
+      padding: 0 0 13px 0;
+      border: 2px solid @border-gray-light;
+      border-radius: 1px;
+      order: 0;
+    }
+
+    &--device {
+      padding: 0 0 13px 0;
+      margin-bottom: 59px;
+      border: 2px solid @border-gray-light;
+      border-radius: 1px;
+      order: -1;
+    }
+
+    &--feeling {
+      margin-bottom: 47px;
+      order: 1;
+    }
+  }
+
+  .contest__legend {
+    &--progress,
+    &--device {
+      width: 365px;
+      padding: 0 5px 0 0;
+      margin-bottom: 48px;
+    }
+
+    &--contacts-data {
+      width: 260px;
+      padding: 0 7px 0 0;
+      margin: 0;
+    }
+
+    &--feeling {
+      padding-top: 14px;
+      margin-bottom: 16px;
+    }
+  }
+
+
+  .contest__fieldset-item,
+  .contest__fieldset-item:last-child {
+    flex-direction: inherit;
+    margin-bottom: 53px;
+  }
+
+  .contest__label {
+    &--data,
+    &--contacts-data {
+      padding-top: 18px;
+      padding-left: 0;
+      margin: 0;
+      margin-right: 18px;
+    }
+
+    &--progress {
+      padding-left: 60px;
+      margin-bottom: 34px;
+      font-size: 18px;
+    }
+
+    &--device {
+      padding-left: 119px;
+      margin-bottom: -8px;
+    }
+  }
+
+  .contest__input {
+    &--surname,
+    &--patronymic {
+      width: 500px;
+    }
+
+    &--name {
+      width: 540px;
+    }
+
+    &--checkbox + label::after {
+      position: absolute;
+      content: " ";
+      left: 1px;
+      top: -4px;
+      width: 35px;
+      height: 35px;
+      border: 2px solid @border-gray-light;
+      border-radius: 1px;
+    }
+
+    &--checkbox:checked + label::before {
+      position: absolute;
+      content: " ";
+      left: 10px;
+      top: 7px;
+      width: 22px;
+      height: 16px;
+      background-image: url("../img/custom-icon/tick.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--radio + label::after {
+      left: 58px;
+      top: -5px;
+    }
+
+    &--radio:checked + label::before {
+      left: 71px;
+      top: 8px;
+    }
+
+    &--feeling {
+      padding-top: 13px;
+      padding-left: 21px;
+      padding-bottom: 24px;
+    }
+  }
+
+  .contest__button {
+    padding: 17px 5px;
+    margin: 0;
+    margin-bottom: 37px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: @color-white;
+    background-color: @bg-btn-green;
+    border: none;
+    order: 1;
+  }
+
+  .contest__input-description {
+    padding: 0;
+    padding-left: 50px;
+    margin: 0;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+    order: 1;
+
+    span {
+      color: @color-pink-bright;
+    }
   }
 }
