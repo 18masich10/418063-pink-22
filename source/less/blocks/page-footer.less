@@ -10,6 +10,8 @@
 
 .page-footer__wrapper {
   display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 38px;
 
   &--index {
     padding: 33px 0;
@@ -28,8 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 auto;
 }
 
 .page-footer__social {
@@ -42,7 +43,6 @@
 .page-footer__copyright {
   display: block;
   width: 130px;
-  padding: 39px 0;
   margin: 0 auto;
 }
 
@@ -52,6 +52,7 @@
     display: grid;
     grid-template-columns: repeat(3, 190px);
     column-gap: 25px;
+    row-gap: 0;
 
     &--index {
       padding: 33px 0;
@@ -78,5 +79,21 @@
     width: 190px;
     padding: 0;
     margin: 0;
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    grid-template-columns: repeat(3, 280px);
+    column-gap: 50px;
+
+    &--catalog {
+      padding: 101px 0 75px;
+    }
+  }
+
+  .page-footer__copyright {
+    width: 280px;
   }
 }

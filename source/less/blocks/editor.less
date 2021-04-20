@@ -88,7 +88,7 @@
   padding-top: 19px;
   padding-bottom: 19px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 19px;
   list-style: none;
   overflow: hidden;
 }
@@ -96,6 +96,7 @@
 .editor__filter-item {
   display: none;
   padding: 0;
+  padding-top: 17px;
   padding-bottom: 12px;
   margin: 0;
   border-bottom: 1px solid rgba(@bg-blue-darker, 0.1);
@@ -216,6 +217,7 @@
   .editor__filter-item {
     position: relative;
     display: block;
+    padding: 0;
     padding-bottom: 34px;
     margin-bottom: 35px;
 
@@ -281,6 +283,90 @@
     &--reset {
       padding-left: 93px;
       padding-right: 90px;
+    }
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .editor__wrapper {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 20px;
+    padding: 54px 0;
+  }
+
+  .editor__img {
+    margin: 0 70px 0 80px;
+  }
+
+  .editor__filter {
+    width: 400px;
+    margin-bottom: 91px;
+  }
+
+  .editor__filter-item {
+    &--crop::after {
+      top: -21px;
+      left: 0;
+      width: 44px;
+      height: 44px;
+      background-image: url("../img/custom-icon/crop-desktop.svg");
+    }
+
+    &--fill::after {
+      top: -20px;
+      left: 0;
+      width: 48px;
+      height: 43px;
+      background-image: url("../img/custom-icon/fill-desktop.svg");
+    }
+
+    &--contrast::after {
+      top: -16px;
+      left: 6px;
+      width: 32px;
+      height: 32px;
+      background-image: url("../img/custom-icon/contrast-desktop.svg");
+    }
+  }
+
+  .editor__filter-scale {
+    width: 285px;
+    margin: 0 0 0 92px;
+  }
+
+  .editor__filter-toggle {
+    &--crop {
+      right: -19px;
+    }
+
+    &--fill {
+      left: 35px;
+    }
+
+    &--contrast {
+      left: 136px;
+    }
+  }
+
+  .editor__button-container {
+    flex-direction: row;
+  }
+
+  .editor__button {
+    width: 182px;
+    margin: 0;
+
+    &--submit {
+      padding-left: 40px;
+      padding-right: 30px;
+      margin-right: 45px;
+    }
+
+    &--reset {
+      padding-left: 51px;
+      padding-right: 45px;
     }
   }
 }
