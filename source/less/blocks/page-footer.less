@@ -9,11 +9,7 @@
 }
 
 .page-footer__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
 
   &--index {
     padding: 33px 0;
@@ -48,4 +44,39 @@
   width: 130px;
   padding: 39px 0;
   margin: 0 auto;
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 190px);
+    column-gap: 25px;
+
+    &--index {
+      padding: 33px 0;
+    }
+
+    &--form {
+      padding: 37px 0;
+    }
+
+    &--catalog {
+      padding: 36px 0 38px;
+    }
+  }
+
+  .page-footer__logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    display: block;
+    width: 190px;
+    padding: 0;
+    margin: 0;
+  }
 }
