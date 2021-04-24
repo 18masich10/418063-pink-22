@@ -11,8 +11,9 @@
 
 .download__button {
   display: block;
-  padding: 17px;
-  margin: 0;
+  width: 240px;
+  padding: 16px;
+  margin: 0 auto;
   margin-bottom: 33px;
   font-size: 18px;
   line-height: 18px;
@@ -27,7 +28,8 @@
 .download__list {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  gap: 35px;
+  justify-content: center;
+  column-gap: 35px;
   padding: 0;
   margin: 0;
   margin-bottom: 21px;
@@ -35,17 +37,12 @@
 }
 
 .download__item {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
-}
-
-.download__item:first-child {
-  margin-left: 38px;
-}
-
-.download__item:last-child {
-  margin-right: 36px;
 }
 
 .download__icon {
@@ -75,8 +72,49 @@
   display: block;
   width: 280px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-weight: 300;
   text-align: center;
   color: @color-white;
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .download {
+    width: 300px;
+  }
+
+  .download__button {
+    padding: 16px 28px;
+    margin-bottom: 45px;
+  }
+
+  .download__list {
+    margin-bottom: 34px;
+  }
+
+  .download__description {
+    display: block;
+    width: 295px;
+    font-size: 18px;
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .download {
+    padding-bottom: 24px;
+  }
+
+  .download__button {
+    width: 258px;
+    padding: 18px;
+    margin: 0;
+    margin-bottom: 67px;
+    font-size: 21px;
+  }
+
+  .download__list {
+    margin-bottom: 51px;
+  }
 }

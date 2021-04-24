@@ -11,7 +11,7 @@
 }
 
 .slider__toggles {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -38,5 +38,40 @@
     width: 12px;
     height: 12px;
     background-image: url("../img/slider/btn-slider-current.svg");
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .slider__controls {
+    position: relative;
+    display: flex;
+  }
+
+  .slider__control {
+    position: absolute;
+    width: 26px;
+    height: 41px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &--prev,
+    &--next {
+      top: -159px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--prev {
+      left: 0;
+      background-image: url("../img/slider/left-arrow.svg");
+    }
+
+    &--next {
+      right: 0;
+      background-image: url("../img/slider/right-arrow.svg");
+    }
   }
 }

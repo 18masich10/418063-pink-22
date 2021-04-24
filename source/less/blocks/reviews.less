@@ -76,3 +76,89 @@
   display: block;
   margin: 0 auto;
 }
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    padding-top: 26px;
+    padding-bottom: 79px;
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews__autor {
+    &--top {
+      display: none;
+    }
+
+    &--bottom {
+      display: block;
+    }
+  }
+
+  .reviews__text {
+    width: 620px;
+    margin-bottom: 36px;
+    font-size: 18px;
+  }
+
+  .reviews__autor-name {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .reviews__autor-info {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .reviews__wrapper {
+    padding-top: 73px;
+    padding-bottom: 76px;
+  }
+
+  .reviews__list {
+    position: relative;
+
+    &::before {
+      display: flex;
+      content: " ";
+      width: 79px;
+      height: 63px;
+      padding: 0;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      background-image: url("../img/custom-icon/quotes.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .reviews__text {
+    width: 700px;
+    margin-bottom: 35px;
+  }
+
+  .reviews__autor-name {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+
+  .reviews__autor-info {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .reviews__control {
+    display: block;
+  }
+}
