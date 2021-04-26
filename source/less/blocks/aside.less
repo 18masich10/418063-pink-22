@@ -4,3 +4,90 @@
 .aside {
   display: none;
 }
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .aside {
+    display: block;
+    background-color: @bg-white;
+  }
+
+  .aside__wrapper {
+    display: grid;
+    grid-template-columns: 240px 310px;
+    column-gap: 70px;
+  }
+
+  .aside__icon {
+    padding: 54px 0;
+  }
+
+  .aside__description {
+    padding: 97px 0;
+
+    h2 {
+      width: 205px;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: left;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    a {
+      padding: 0;
+      margin: 0;
+      color: @color-pink-bright;
+    }
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .aside__wrapper {
+    display: grid;
+    grid-template-columns: min-content 570px;
+    column-gap: 72px;
+  }
+
+  .aside__icon {
+    padding: 67px 0 61px;
+
+    svg {
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  .aside__description {
+    padding: 0;
+    padding-top: 161px;
+
+    h2 {
+      width: 400px;
+      margin-bottom: 22px;
+    }
+
+    p {
+      width: 520px;
+      font-size: 18px;
+      line-height: 30px;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}

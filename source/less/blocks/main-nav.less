@@ -5,8 +5,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+  width: 100%;
 }
 
 .main-nav__toggle {
@@ -31,9 +30,9 @@
 .main-nav--opened .main-nav__toggle {
   position: absolute;
   top: -46px;
-  right: -28px;
+  right: 19px;
   display: block;
-  width: 50px;
+  width: 24px;
   height: 24px;
   background-image: url("../img/custom-icon/close-menu-btn.svg");
   background-repeat: no-repeat;
@@ -41,4 +40,39 @@
 
 .main-nav__list {
   display: block;
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .main-nav--opened .main-nav__toggle {
+    position: absolute;
+    top: -67px;
+    right: 19px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/custom-icon/close-menu-btn.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: grid;
+    grid-column-start: -1;
+    width: 650px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    display: none;
+  }
 }

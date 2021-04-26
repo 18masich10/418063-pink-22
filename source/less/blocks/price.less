@@ -3,22 +3,25 @@
 
 .price {
   display: block;
+  height: 482px; //временно
   background-color: @bg-gray-lighter;
 }
 
 .price__wrapper {
   position: relative;
-  display: block;
+  display: none;
   padding: 0;
-  padding-top: 96px;
-  padding-bottom: 104px;
+  padding-top: 102px;
+  padding-bottom: 100px;
+  height: 280px; // временно - убрать
 }
 
 .price__list {
+  display: none;
   padding: 0;
   margin: 0;
   border-collapse: collapse;
-  outline: 1px solid @border-gray-light;
+  border: 1px solid @border-gray-light;
 }
 
 .price__row {
@@ -26,11 +29,10 @@
   line-height: 30px;
   text-transform: uppercase;
   color: @color-blue-darker;
-  outline: 1px solid @border-gray-light;
+  border: 1px solid @border-gray-light;
 }
 
 .price__tariff {
-  outline: 1px solid @border-gray-light;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +47,7 @@
   text-transform: uppercase;
   text-align: center;
   color: @color-white;
+  border: 1px solid @border-gray-light;
   background-color: @bg-blue-darker;
   overflow: hidden;
 }
@@ -56,6 +59,25 @@
 .price__tariff span {
   font-size: 18px;
   font-weight: 700;
+}
+
+.price__hit::after {
+  position: absolute;
+  top: 18px;
+  left: -29px;
+  content: "ХИТ";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 114px;
+  height: 23px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @color-white;
+  background-color: @fill-icon-pink-bright;
+  transform: rotate(-45deg);
+  z-index: 6;
 }
 
 .price__option {
@@ -72,13 +94,13 @@
   width: 233px;
   text-align: center;
   background-repeat: no-repeat;
-  outline: 1px dashed red; // временно
+  outline: 1px dashed red; // временно - удалить
 
   &--selected::after {
     position: absolute;
     content: " ";
-    top: 19px;
-    left: 102px;
+    top: 17px;
+    left: 101px;
     width: 31px;
     height: 21px;
     background-image: url("../img/price/yes.svg");
@@ -87,8 +109,8 @@
   &--not-selected::after {
     position: absolute;
     content: " ";
-    top: 16px;
-    left: 103px;
+    top: 15px;
+    left: 104px;
     width: 27px;
     height: 27px;
     background-image: url("../img/price/no.svg");
@@ -96,9 +118,88 @@
 }
 
 .price__toggles {
+  display: none;
   position: absolute;
   top: 412px;
   left: 461px;
-  display: block;
   margin: 0 auto;
+}
+
+// От 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .price {
+    height: 372px;
+  }
+
+  .price__wrapper {
+    height: 169px;
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .slider__controls {
+    position: relative;
+    display: flex;
+  }
+
+  .price {
+    height: auto; // временно - убрать
+  }
+
+  .price__wrapper {
+    position: relative;
+    display: block;
+    height: auto; // временно - убрать
+    padding: 0;
+    padding-top: 111px;
+    padding-bottom: 95px;
+  }
+
+  .price__list {
+    display: block;
+    border: 1px solid @border-gray-lighter;
+
+    tbody {
+      border: 0;
+      background-color: @bg-white;
+    }
+  }
+
+  .price__row {
+    border: 0;
+    border-top: 2px solid @border-gray-light;
+    border-left: 2px solid @border-gray-light;
+    border-right: 2px solid @border-gray-light;
+
+    &:first-child {
+      border: 0;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid @border-gray-light;
+    }
+  }
+
+  .price__tariff {
+    width: 233px;
+    justify-content: center;
+    text-align: center;
+    padding: 16px 0 22px 1px;
+    border: 1px solid @border-gray-lighter;
+
+    &:first-child {
+      border: 0;
+    }
+  }
+
+  .price__option {
+    width: 190px;
+    padding: 12px 20px 16px;
+  }
+
+  .price__status {
+    width: 232px;
+    border-left: 2px solid @border-gray-light;
+  }
 }

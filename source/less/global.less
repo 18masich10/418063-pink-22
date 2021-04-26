@@ -4,29 +4,27 @@
 // Базовая типографика для проекта Pink
 // ------------------------------------------
 
+// от 320px мобильная версия
 .container {
   width: 280px;
   margin: 0 auto;
   outline: 1px dashed red; //временно
 }
 
-.hit::after {
-  position: absolute;
-  top: 18px;
-  left: -29px;
-  content: "ХИТ";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 114px;
-  height: 23px;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  color: @color-white;
-  background-color: @fill-icon-pink-bright;
-  transform: rotate(-45deg);
-  z-index: 6;
+// от 660px планшетная версия
+@media (min-width: @tablet-width) {
+  .container {
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+
+// от 12000px десктопная версия
+@media (min-width: @desktop-width) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+  }
 }
 
 .visually-hidden {
