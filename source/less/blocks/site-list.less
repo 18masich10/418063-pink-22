@@ -20,6 +20,7 @@
 }
 
 .site-list__link {
+  position: relative;
   display: block;
   padding: 16px 0;
   font-size: 18px;
@@ -28,6 +29,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @color-white;
+
+  &:hover {
+    color: @color-pink-bright;
+  }
+
+  &:active,
+  &:focus {
+    color: @color-pink-bright;
+    opacity: 0.3;
+  }
 }
 
 // от 1200px десктопная версия

@@ -7,7 +7,7 @@
 }
 
 .editor__wrapper {
-  padding: 18px 0 41px;
+  padding: 20px 0 41px;
 }
 
 .editor__img {
@@ -16,7 +16,7 @@
   height: 374px;
   padding: 0;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 42px;
 }
 
 .editor__form {
@@ -164,10 +164,11 @@
 .editor__button {
   display: flex;
   flex-wrap: wrap;
+  font-family: @base-font;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
-  padding: 15px 0;
+  padding: 15px 0 16px;
   margin: 0;
   border-radius: 30px;
   box-sizing: border-box;
@@ -176,7 +177,7 @@
   &--submit {
     padding-left: 88px;
     padding-right: 88px;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
     color: @color-pink-bright;
     border: 3px solid @border-pink-bright;
   }
@@ -189,7 +190,7 @@
   }
 }
 
-// От 660px планшетная версия
+// от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .editor__wrapper {
     display: grid;
