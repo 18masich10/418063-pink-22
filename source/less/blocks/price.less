@@ -48,15 +48,15 @@
   border: 1px solid @border-gray-light;
   background-color: @bg-blue-darker;
   overflow: hidden;
-}
 
-.price__tariff:first-child {
-  background-color: @bg-gray-lighter;
-}
+  &:first-child {
+    background-color: @bg-gray-lighter;
+  }
 
-.price__tariff span {
-  font-size: 18px;
-  font-weight: 700;
+  span {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
 .price__hit::after {
@@ -125,10 +125,6 @@
 
 // от 660px планшетная версия
 @media (min-width: @tablet-width) {
-  .price {
-    background-color: @bg-gray-lighter;
-  }
-
   .price__wrapper {
     padding-top: 82px;
     padding-bottom: 64px;
@@ -147,8 +143,8 @@
   .price__row {
     border: 0;
     border-top: 2px solid @border-gray-light;
-    border-left: 2px solid @border-gray-light;
     border-right: 2px solid @border-gray-light;
+    border-left: 2px solid @border-gray-light;
 
     &:first-child {
       border: 0;
@@ -164,9 +160,7 @@
     padding: 12px 0 9px 1px;
     font-size: 16px;
     font-weight: 700;
-    line-height: 30px;
     justify-content: center;
-    text-align: center;
     border: 1px solid @border-gray-lighter;
 
     &:first-child {
@@ -175,13 +169,11 @@
 
     span {
       margin-top: -3px;
-      font-size: 18px;
       font-weight: 300;
     }
   }
 
   .price__hit::after {
-    position: absolute;
     top: 15px;
     left: -36px;
     height: 20px;
@@ -211,63 +203,45 @@
 
 // от 1200px десктопная версия
 @media (min-width: @desktop-width) {
-  .price {
-    height: auto; // временно - убрать
-  }
-
   .price__wrapper {
-    position: relative;
-    display: block;
-    height: auto; // временно - убрать
-    padding: 0;
     padding-top: 111px;
-    padding-bottom: 95px;
-  }
-
-  .price__list {
-    display: block;
-    border: 1px solid @border-gray-lighter;
-
-    tbody {
-      border: 0;
-      background-color: @bg-white;
-    }
-  }
-
-  .price__row {
-    border: 0;
-    border-top: 2px solid @border-gray-light;
-    border-left: 2px solid @border-gray-light;
-    border-right: 2px solid @border-gray-light;
-
-    &:first-child {
-      border: 0;
-    }
-
-    &:last-child {
-      border-bottom: 2px solid @border-gray-light;
-    }
+    padding-bottom: 92px;
   }
 
   .price__tariff {
     width: 233px;
-    justify-content: center;
-    text-align: center;
     padding: 16px 0 22px 1px;
-    border: 1px solid @border-gray-lighter;
+    font-size: 18px;
 
-    &:first-child {
-      border: 0;
+    span {
+      margin-top: 0;
+      font-size: 24px;
     }
   }
 
+  .price__hit::after {
+    top: 19px;
+    left: -30px;
+    height: 22px;
+  }
+
   .price__option {
-    width: 190px;
-    padding: 12px 20px 16px;
+    width: 195px;
+    padding: 11px 19px 18px;
+    font-size: 18px;
   }
 
   .price__status {
-    width: 232px;
-    border-left: 2px solid @border-gray-light;
+    width: 231px;
+
+    &--selected::after {
+      top: 16px;
+      left: 99px;
+    }
+
+    &--not-selected::after {
+      top: 13px;
+      left: 101px;
+    }
   }
 }

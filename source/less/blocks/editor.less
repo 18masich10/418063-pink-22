@@ -43,10 +43,6 @@
   border: 0;
   background-color: transparent;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
   path {
     fill: @fill-icon-blue-darker;
     opacity: 0.3;
@@ -72,6 +68,10 @@
       fill: @fill-icon-pink-bright;
       opacity: 1;
     }
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 
   &:focus {
@@ -291,7 +291,6 @@
 // от 1200px десктопная версия
 @media (min-width: @desktop-width) {
   .editor__wrapper {
-    display: grid;
     grid-template-columns: max-content 1fr;
     column-gap: 20px;
     padding: 54px 0;
@@ -303,6 +302,7 @@
 
   .editor__filter {
     width: 400px;
+    padding-top: 20px;
     margin-bottom: 91px;
   }
 
