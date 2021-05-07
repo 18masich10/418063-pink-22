@@ -40,9 +40,19 @@
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+  opacity: 0.3;
 
   &--current {
     display: block;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus-within {
+    opacity: 0.1;
   }
 }
 
@@ -54,6 +64,14 @@
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+  opacity: 1;
+
+  &:hover,
+  &:active,
+  &:focus-within {
+    opacity: 1;
+    background-color: transparent;
+  }
 }
 
 // от 660px планшетная версия
@@ -90,6 +108,7 @@
       top: -197px;
       background-repeat: no-repeat;
       background-position: 0 0;
+      opacity: 0.3;
     }
 
     &--prev {
@@ -100,6 +119,20 @@
     &--next {
       right: 0;
       background-image: url("../img/slider/right-arrow.svg");
+    }
+
+    &--prev:hover,
+    &--next:hover {
+      opacity: 0.6;
+    }
+
+    &--prev:active,
+    &--next:active,
+    &--prev:focus-within,
+    &--next:focus-within {
+      padding: 0;
+      outline: none;
+      opacity: 0.1;
     }
   }
 

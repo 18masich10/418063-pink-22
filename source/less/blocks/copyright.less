@@ -28,6 +28,20 @@
   margin-left: 15px;
 }
 
+.copyright__icon {
+  fill: @fill-icon-pink-bright;
+
+  &:hover {
+    fill: @fill-icon-blue-darker;
+  }
+
+  &:active,
+  &:focus-within {
+    fill: @fill-icon-blue-darker;
+    opacity: 0.3;
+  }
+}
+
 // от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .copyright {

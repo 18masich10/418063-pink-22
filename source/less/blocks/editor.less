@@ -43,43 +43,45 @@
   border: 0;
   background-color: transparent;
 
-  path {
-    fill: @fill-icon-blue-darker;
-    opacity: 0.3;
-
-    &--crop {
-      width: 44px;
-      height: 44px;
-    }
-
-    &--fill {
-      width: 48px;
-      height: 43px;
-    }
-
-    &--contrast {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  &--current {
-    path {
-      fill: @fill-icon-pink-bright;
-      opacity: 1;
-    }
+  &--current .editor__icon {
+    fill: @fill-icon-pink-bright;
+    opacity: 1;
   }
 
   &:last-child {
     margin-right: 0;
   }
+}
 
-  &:focus {
-    path {
-      fill: @fill-icon-pink-bright;
-      opacity: 1;
-    }
+.editor__icon {
+  fill: @fill-icon-blue-darker;
+  opacity: 0.3;
+
+  &--crop {
+    width: 44px;
+    height: 44px;
   }
+
+  &--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.editor__action:hover .editor__icon {
+  fill: @fill-icon-blue-darker;
+  opacity: 0.5;
+}
+
+.editor__action:active .editor__icon,
+.editor__action:focus-within .editor__icon {
+  fill: @fill-icon-pink-bright;
+  opacity: 1;
 }
 
 .editor__filter {
@@ -151,6 +153,11 @@
   &--contrast {
     left: 115px;
   }
+
+  &:active,
+  &:focus-within {
+    background-color: @bg-pink-bright;
+  }
 }
 
 .editor__button-container {
@@ -180,6 +187,17 @@
     margin-bottom: 12px;
     color: @color-pink-bright;
     border: 3px solid @border-pink-bright;
+
+    &:hover {
+      color: @color-white;
+      background-color: @bg-pink-bright;
+    }
+
+    &:active,
+    &:focus-within {
+      color: rgba(@color-white, 0.3);
+      background-color: @bg-pink-bright;
+    }
   }
 
   &--reset {
@@ -187,6 +205,18 @@
     padding-right: 101px;
     color: rgba(@color-blue-darker, 0.1);
     border: 3px solid rgba(@border-blue-darker, 0.1);
+
+    &:hover {
+      color: rgba(@color-blue-darker, 0.3);
+      border-color: rgba(@border-blue-darker, 0.3);
+    }
+
+    &:active,
+    &:focus-within {
+      color: rgba(@color-white, 0.3);
+      background-color: rgba(@bg-blue-darker, 0.3);
+      border: none;
+    }
   }
 }
 

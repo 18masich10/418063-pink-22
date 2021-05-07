@@ -22,6 +22,21 @@
   margin-left: 5px;
   border: 3px solid rgba(@border-blue-darker, 0.1);
   border-radius: 50%;
+
+  &:hover {
+    border: 3px solid rgba(@border-blue-darker, 1);
+  }
+
+  &:active,
+  &:focus-within {
+    border: 3px solid rgba(@border-blue-darker, 0.1);
+  }
+}
+
+.social__item:active .social__icon,
+.social__item:focus-within .social__icon {
+  fill: @fill-icon-pink-bright;
+  opacity: 0.3;
 }
 
 .social__link {

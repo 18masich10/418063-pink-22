@@ -49,13 +49,32 @@
   text-align: center;
 }
 
-.contacts__tel-link,
+.contacts__tel-link {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+  text-decoration: none;
+  color: @color-pink-bright;
+}
+
 .contacts__email-link {
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
   text-decoration: none;
   color: @color-pink-bright;
+
+  &:hover {
+    color: @color-blue-darker;
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus-within {
+    color: @color-blue-darker;
+    opacity: 0.3;
+    text-decoration: none;
+  }
 }
 
 .contacts__email {

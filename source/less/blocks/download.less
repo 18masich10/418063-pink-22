@@ -23,6 +23,17 @@
   color: @color-white;
   border: 2px solid @border-white;
   border-radius: 30px;
+
+  &:hover {
+    color: @color-pink-bright;
+    background-color: @bg-white;
+  }
+
+  &:active,
+  &:focus-within {
+    color: rgba(@color-pink-bright, 0.3);
+    background-color: @bg-white;
+  }
 }
 
 .download__list {
