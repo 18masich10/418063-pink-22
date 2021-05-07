@@ -26,7 +26,7 @@
             <li class="site-list__item">
               <a class="site-list__link">Главная</a>
             </li>
-            <li class="site-list__item site-list__item--current">
+            <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Фотографии</a>
             </li>
             <li class="site-list__item">
@@ -149,7 +149,7 @@
           <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
 
           <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
+            <blockquote class="reviews__item reviews__item--current slider__item">
               <div class="reviews__autor reviews__autor--top">
                 <p class="reviews__autor-name">Николай Петров</p>
               </div>
@@ -164,30 +164,62 @@
                 <p class="reviews__autor-info">25 лет, водитель трамвая</p>
               </div>
             </blockquote>
+
+            <blockquote class="reviews__item slider__item">
+              <div class="reviews__autor reviews__autor--top">
+                <p class="reviews__autor-name">Николай Петров</p>
+              </div>
+
+              <p class="reviews__text">
+                «Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, debitis beatae nostrum accusamus, consequuntur amet
+                delectus qui nobis, voluptatibus ut minima laborum dolor quisquam! Fugiat amet repellat minus ipsa nihil voluptate maiores
+                enim quae in? Nesciunt placeat eius ipsum. Distinctio.»
+              </p>
+
+              <div class="reviews__autor reviews__autor--bottom">
+                <p class="reviews__autor-name">Николай Петров</p>
+                <p class="reviews__autor-info">25 лет, водитель трамвая</p>
+              </div>
+            </blockquote>
+
+            <blockquote class="reviews__item slider__item">
+              <div class="reviews__autor reviews__autor--top">
+                <p class="reviews__autor-name">Николай Петров</p>
+              </div>
+
+              <p class="reviews__text">
+                «Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio.»
+              </p>
+
+              <div class="reviews__autor reviews__autor--bottom">
+                <p class="reviews__autor-name">Николай Петров</p>
+                <p class="reviews__autor-info">25 лет, водитель трамвая</p>
+              </div>
+            </blockquote>
           </div>
 
           <div class="reviews__control slider__controls">
-              <button class="slider__control slider__control--prev">
+              <button class="slider__control slider__control--prev" onclick="minusSlide()">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="slider__control slider__control--next">
+              <button class="slider__control slider__control--next" onclick="plusSlide()">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
           </div>
 
-          <ul class="reviews__toggles slider__toggles">
+          <ul class="reviews__toggles slider__toggles slider__toggles--reviews">
             <li class="slider__toggle">
-              <button class="slider__toggle-button slider__toggle-button--current" type="button" aria-label="Перейти на первый слайд">
+              <button class="slider__toggle-button slider__button-current" type="button" aria-label="Перейти на первый слайд" onclick="currentSlide(1)">
                 <span class="visually-hidden">Первый слайд</span>
               </button>
             </li>
             <li class="slider__toggle">
-              <button class="slider__toggle-button" type="button" aria-label="Перейти на второй слайд">
+              <button class="slider__toggle-button" type="button" aria-label="Перейти на второй слайд" onclick="currentSlide(2)">
                 <span class="visually-hidden">Второй слайд</span>
               </button>
             </li>
             <li class="slider__toggle">
-              <button class="slider__toggle-button" type="button" aria-label="Перейти на третий слайд">
+              <button class="slider__toggle-button" type="button" aria-label="Перейти на третий слайд" onclick="currentSlide(3)">
                 <span class="visually-hidden">Третий слайд</span>
               </button>
             </li>
@@ -196,61 +228,72 @@
       </section>
 
       <section class="price">
-        <div class="price__wrapper slider container">
+        <div class="price__wrapper container">
           <h2 class="visually-hidden">Стоимость пакета опций</h2>
-          <table class="price__list">
+          <div class="price__slider">
+            <table class="price__list slider">
               <tr class="price__row">
-                <th class="price__tariff"></th>
-                <th class="price__tariff">База<span>1,99 usd</span></th>
-                <th class="price__tariff price__hit">Стандарт<span>3,99 usd</span></th>
-                <th class="price__tariff">Анлим<span>9,99 usd</span></th>
+                <th class="price__tariff price__tariff--mobile-invisible"></th>
+                <th class="price__tariff slider__element" id="basa">База<span>1,99 usd</span></th>
+                <th class="price__tariff price__hit slider__element slider__element--current" id="standart">Стандарт<span>3,99 usd</span></th>
+                <th class="price__tariff slider__element" id="anlim">Анлим<span>9,99 usd</span></th>
               </tr>
               <tr class="price__row">
-                <td class="price__option">Розовый фильтр</td>
+                <td class="price__option price__option--mobile-invisible">Розовый фильтр</td>
                 <td class="price__status price__status--selected">
                   <span class="visually-hidden">Опция входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Розовый фильтр</span>
                 </td>
                 <td class="price__status price__status--selected">
                   <span class="visually-hidden">Опция входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Розовый фильтр</span>
                 </td>
                 <td class="price__status price__status--selected">
                   <span class="visually-hidden">Опция входит в пакет услуг</span>
-                </td>
-              </tr>
-              <tr class="price__row">
-                <td class="price__option">Смайлики</td>
-                <td class="price__status price__status--not-selected">
-                  <span class="visually-hidden">Опция не входит в пакет услуг</span>
-                </td>
-                <td class="price__status price__status--selected">
-                  <span class="visually-hidden">Опция входит в пакет услуг</span>
-                </td>
-                <td class="price__status price__status--selected">
-                  <span class="visually-hidden">Опция входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Розовый фильтр</span>
                 </td>
               </tr>
               <tr class="price__row">
-                <td class="price__option">Комментарии</td>
+                <td class="price__option price__option--mobile-invisible">Смайлики</td>
                 <td class="price__status price__status--not-selected">
                   <span class="visually-hidden">Опция не входит в пакет услуг</span>
-                </td>
-                <td class="price__status price__status--not-selected">
-                  <span class="visually-hidden">Опция не входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Смайлики</span>
                 </td>
                 <td class="price__status price__status--selected">
                   <span class="visually-hidden">Опция входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Смайлики</span>
+                </td>
+                <td class="price__status price__status--selected">
+                  <span class="visually-hidden">Опция входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Смайлики</span>
+                </td>
+              </tr>
+              <tr class="price__row">
+                <td class="price__option price__option--mobile-invisible">Комментарии</td>
+                <td class="price__status price__status--not-selected">
+                  <span class="visually-hidden">Опция не входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Комментарии</span>
+                </td>
+                <td class="price__status price__status--not-selected">
+                  <span class="visually-hidden">Опция не входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Комментарии</span>
+                </td>
+                <td class="price__status price__status--selected">
+                  <span class="visually-hidden">Опция входит в пакет услуг</span>
+                  <span class="price__option price__option--mobile-opened">Комментарии</span>
                 </td>
               </tr>
           </table>
+          </div>
 
-          <ul class="price__toggles slider__toggles">
+          <ul class="price__toggles slider__toggles slider__toggles--price">
             <li class="slider__toggle">
               <button class="slider__toggle-button" type="button" aria-label="Перейти на первый слайд">
                 <span class="visually-hidden">Первый слайд</span>
               </button>
             </li>
             <li class="slider__toggle">
-              <button class="slider__toggle-button slider__toggle-button--current" type="button" aria-label="Перейти на второй слайд">
+              <button class="slider__toggle-button slider__button-current" type="button" aria-label="Перейти на второй слайд">
                 <span class="visually-hidden">Второй слайд</span>
               </button>
             </li>
@@ -344,5 +387,6 @@
       </div>
     </footer>
     <script src="js/main-nav.js"></script>
+    <script src="js/reviews-slider.js"></script>
   </body>
 </html>

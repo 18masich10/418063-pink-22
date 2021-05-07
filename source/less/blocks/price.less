@@ -8,16 +8,29 @@
 
 .price__wrapper {
   position: relative;
-  display: none;
+  display: block;
   padding: 0;
-  padding-top: 102px;
-  padding-bottom: 100px;
+  padding-top: 98px;
+  padding-bottom: 44px;
+}
+
+.price__slider {
+  position: relative;
+  width: 320px;
+  height: 280px;
+  padding: 0;
+  margin: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 47px;
+  overflow-y: hidden;
 }
 
 .price__list {
-  display: none;
-  padding: 0;
-  margin: 0;
+  position: absolute;
+  display: block;
+  width: 836px;
+  height: 279px;
   border-collapse: collapse;
   border: 1px solid @border-gray-light;
 }
@@ -36,11 +49,11 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  width: 235px;
-  padding: 17px 0 21px 0;
+  width: 277px;
+  padding: 12px 0 30px 0;
   margin: 0;
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
@@ -49,20 +62,25 @@
   background-color: @bg-blue-darker;
   overflow: hidden;
 
+  &--mobile-invisible {
+    display: none;
+  }
+
   &:first-child {
     background-color: @bg-gray-lighter;
   }
 
   span {
+    margin-top: -3px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
 .price__hit::after {
   position: absolute;
   top: 18px;
-  left: -29px;
+  left: -31px;
   content: "ХИТ";
   display: flex;
   justify-content: center;
@@ -85,20 +103,32 @@
   font-size: 18px;
   font-weight: 400;
   text-transform: initial;
+
+  &--mobile-invisible {
+    display: none;
+  }
+
+  &--mobile-opened {
+    display: block;
+    width: 237px;
+    padding: 10px 20px 16px;
+    font-size: 14px;
+    text-align: left;
+    text-transform: uppercase;
+  }
 }
 
 .price__status {
   position: relative;
-  width: 233px;
+  width: 277px;
   text-align: center;
   background-repeat: no-repeat;
-  outline: 1px dashed red; // временно - удалить
 
   &--selected::after {
     position: absolute;
     content: " ";
-    top: 17px;
-    left: 101px;
+    top: 16px;
+    left: 230px;
     width: 31px;
     height: 21px;
     background-image: url("../img/price/yes.svg");
@@ -107,8 +137,8 @@
   &--not-selected::after {
     position: absolute;
     content: " ";
-    top: 15px;
-    left: 104px;
+    top: 14px;
+    left: 231px;
     width: 27px;
     height: 27px;
     background-image: url("../img/price/no.svg");
@@ -116,27 +146,33 @@
 }
 
 .price__toggles {
-  display: none;
-  position: absolute;
-  top: 412px;
-  left: 461px;
-  margin: 0 auto;
+  display: flex;
 }
 
 // от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .price__wrapper {
-    padding-top: 82px;
-    padding-bottom: 64px;
+    padding-top: 96px;
+    padding-bottom: 68px;
+  }
+
+  .price__slider {
+    position: relative;
+    width: 620px;
+    height: 222px;
+    margin: 0;
+    margin-bottom: 0;
+    overflow-y: inherit;
   }
 
   .price__list {
     display: block;
+    width: 620px;
     border: 1px solid @border-gray-lighter;
 
     tbody {
-      border: 0;
       background-color: @bg-white;
+      border: 0;
     }
   }
 
@@ -163,13 +199,16 @@
     justify-content: center;
     border: 1px solid @border-gray-lighter;
 
+    &--mobile-invisible {
+      display: block;
+    }
+
     &:first-child {
       border: 0;
     }
 
     span {
       margin-top: -3px;
-      font-weight: 300;
     }
   }
 
@@ -183,6 +222,14 @@
     width: 125px;
     padding: 6px 14px 9px;
     font-size: 14px;
+
+    &--mobile-invisible {
+      display: block;
+    }
+
+    &--mobile-opened {
+      display: none;
+    }
   }
 
   .price__status {
@@ -199,13 +246,22 @@
       left: 62px;
     }
   }
+
+  .price__toggles {
+    display: none;
+  }
 }
 
 // от 1200px десктопная версия
 @media (min-width: @desktop-width) {
   .price__wrapper {
-    padding-top: 111px;
-    padding-bottom: 92px;
+    padding-top: 71px;
+    padding-bottom: 95px;
+  }
+
+  .price__slider {
+    width: 940px;
+    height: 285px;
   }
 
   .price__tariff {

@@ -11,23 +11,28 @@
   display: block;
   padding: 0;
   padding-top: 41px;
-  padding-bottom: 79px;
+  padding-bottom: 34px;
 }
 
 .reviews__list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 31px;
+  list-style: none;
 }
 
 .reviews__item {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: column;
   padding: 0;
   margin: 0;
+
+  &--current {
+    display: flex;
+  }
 }
 
 .reviews__autor {
@@ -48,7 +53,7 @@
   display: block;
   width: 280px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -70,18 +75,18 @@
 }
 
 .reviews__toggles {
-  position: absolute;
-  top: 284px;
-  left: 110px;
-  display: block;
-  margin: 0 auto;
+  display: flex;
 }
 
 // от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .reviews__wrapper {
     padding-top: 39px;
-    padding-bottom: 79px;
+    padding-bottom: 11px;
+  }
+
+  .reviews__list {
+    margin-bottom: 39px;
   }
 
   .reviews__item {
@@ -128,6 +133,7 @@
     position: relative;
 
     &::before {
+      position: relative;
       display: flex;
       content: " ";
       width: 79px;
@@ -147,6 +153,7 @@
 
   .reviews__text {
     width: 700px;
+    padding: 0 119px;
     margin-bottom: 35px;
   }
 
