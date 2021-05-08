@@ -15,19 +15,19 @@
 }
 
 // сообщение - ошибка в заполнении формы
-.modal__error {
+.modal-error {
   display: none; // временно
   position: fixed;
-  top: 50%;
+  top: 35%;
   bottom: auto;
   box-shadow: @modal-box-shadow;
 }
 
 // сообщение - заявка отправлена
-.modal__submit {
+.modal-submit {
   display: none; // временно
   position: fixed;
-  top: 50%;
+  top: 35%;
   bottom: auto;
   box-shadow: @modal-box-shadow;
 }
@@ -61,7 +61,6 @@
   display: block;
   padding: 0;
   margin: 0;
-  margin-bottom: 42px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -69,7 +68,7 @@
   color: @color-blue-darker;
 
   &--error {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   &--submit {
@@ -77,12 +76,30 @@
   }
 }
 
+.modal__br-error {
+  display: none;
+}
+
+.modal__br-submit {
+  &--mobile {
+    display: block;
+  }
+}
+
 .modal__button-bg {
-  padding: 51px 0;
+  display: block;
   margin: 0;
-  margin-left: -20px;
-  margin-right: -20px;
   background-color: @bg-gray-lighter;
+
+  &--error {
+    padding: 0;
+  }
+
+  &--submit {
+    padding: 52px 0;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .modal__button {
@@ -111,5 +128,154 @@
   &:focus-within {
     color: rgba(@color-white, 0.3);
     background-color: @bg-btn-green-hover;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 460px;
+  }
+
+  .modal-error {
+    top: 40%;
+    bottom: auto;
+  }
+
+  .modal-submit {
+    top: 40%;
+    bottom: auto;
+  }
+
+  .modal__wrapper {
+    margin: 0 auto;
+
+    &--error {
+      width: 300px;
+      padding: 39px 0 52px;
+    }
+
+    &--submit {
+      width: 330px;
+      padding: 45px 0 0;
+    }
+  }
+
+  .modal__title {
+    width: 260px;
+    padding: 0 20px;
+    margin-bottom: 21px;
+    font-size: 30px;
+    line-height: 40px;
+
+    &--submit {
+      padding: 0 35px;
+    }
+  }
+
+  .modal__description {
+    font-size: 18px;
+
+    &--error {
+      width: 300px;
+      margin-bottom: 35px;
+    }
+
+    &--submit {
+      width: 330px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .modal__br-error {
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .modal__br-submit {
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .modal__button-bg {
+    &--submit {
+      margin-left: -65px;
+      margin-right: -65px;
+    }
+  }
+
+  .modal__button {
+    width: 300px;
+  }
+}
+
+// от 1200px десктопная версия
+@media (min-width: @desktop-width) {
+  .modal {
+    width: 780px;
+  }
+
+  .modal-error {
+    top: 35%;
+  }
+
+  .modal-submit {
+    top: 35%;
+  }
+
+  .modal__wrapper {
+    &--error,
+    &--submit {
+      width: 450px;
+      padding: 37px 0 0;
+    }
+  }
+
+  .modal__title {
+    width: 400px;
+    padding: 0 25px;
+  }
+
+  .modal__description {
+    &--error,
+    &--submit {
+      width: 400px;
+      padding: 0 25px;
+    }
+
+    &--error {
+      margin-bottom: 63px;
+    }
+
+    &--submit {
+      margin-bottom: 39px;
+    }
+  }
+
+  .modal__br-error {
+    &--tablet {
+      display: none;
+    }
+  }
+
+  .modal__button-bg {
+    &--error,
+    &--submit {
+      display: block;
+      padding: 52px 0;
+      margin-left: -165px;
+      margin-right: -165px;
+    }
+  }
+
+  .modal__button {
+    &--error {
+      width: 300px;
+    }
+
+    &--submit {
+      width: 460px;
+    }
   }
 }
