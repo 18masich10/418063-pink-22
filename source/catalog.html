@@ -12,8 +12,11 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
+  <!-- header page-header -->
   <header class="page-header">
     <div class="page-header__wrapper container">
+      <!-- page-header menu -->
+      <!-- page-header logo -->
       <a class="page-header__logo-link" href="index.html">
         <picture class="page-header__logo">
           <source media="(min-width: 1070px)" srcset="img/logo-icon/logotype-white-desktop.svg">
@@ -21,7 +24,8 @@
           <img class="page-header__logo-img" src="img/logo-icon/logotype-white-mobile.svg" width="74" height="23" alt="Логотип приложения 'Pink'">
         </picture>
       </a>
-
+      <!-- page-header logo end -->
+      <!-- page-header navigation -->
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="Показать навигацию по сайти">
           <span class="visually-hidden">Открыть меню</span>
@@ -42,23 +46,31 @@
           </li>
         </ul>
       </nav>
+      <!-- page-header navigation end -->
     </div>
+    <!-- page-header menu end -->
   </header>
+  <!-- header page-header end -->
+  <!-- main page-main -->
   <main class="page-main">
     <h1 class="visually-hidden">Каталог с фотографиями пользователей приложения</h1>
 
+    <!-- section promo -->
     <section class="promo promo--catalog">
       <div class="promo__wrapper promo__wrapper--catalog container">
         <h2 class="promo__title promo__title--catalog">Фотографии пользователей</h2>
       </div>
     </section>
-
+    <!-- section promo end -->
+    <!-- section catalog -->
     <section class="catalog">
       <div class="catalog__wrapper container">
         <h2 class="visually-hidden">Фотографии пользователей Pink за неделю</h2>
         <p class="catalog__slogan catalog__slogan--top">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
+        <!-- catalog publication/ список публикаций пользователей -->
         <ul class="catalog__list publication">
+          <!-- publication item -->
           <li class="publication__item publication__item--leader">
             <img class="publication__img publication__img--panorama" src="img/catalog/panorama-mobile.jpg" width="320" height="137" alt="#">
             <span class="publication__hit">Панорама дня</span>
@@ -69,6 +81,7 @@
               <p class="publication__like">Нравится: <span>215</span></p>
             </div>
           </li>
+          <!-- publication item -->
           <li class="publication__item">
             <img class="publication__img" src="img/catalog/photo-1-mobile.jpg" width="280" height="180" alt="#">
             <div class="publication__inner">
@@ -77,6 +90,7 @@
               <p class="publication__like">Нравится: <span>356</span></p>
             </div>
           </li>
+          <!-- publication item -->
           <li class="publication__item">
             <img class="publication__img" src="img/catalog/photo-2-mobile.jpg" width="280" height="180" alt="#">
             <div class="publication__inner">
@@ -85,6 +99,7 @@
               <p class="publication__like">Нравится: <span>666</span></p>
             </div>
           </li>
+          <!-- publication item -->
           <li class="publication__item">
             <img class="publication__img" src="img/catalog/photo-3-mobile.jpg" width="280" height="180" alt="#">
             <div class="publication__inner">
@@ -93,6 +108,7 @@
               <p class="publication__like">Нравится: <span>215</span></p>
             </div>
           </li>
+          <!-- publication item -->
           <li class="publication__item">
             <img class="publication__img" src="img/catalog/photo-4-mobile.jpg" width="280" height="180" alt="#">
             <div class="publication__inner">
@@ -101,6 +117,7 @@
               <p class="publication__like">Нравится: <span>4</span></p>
             </div>
           </li>
+          <!-- publication item -->
           <li class="publication__item">
             <img class="publication__img" src="img/catalog/photo-5-mobile.jpg" width="280" height="180" alt="#">
             <div class="publication__inner">
@@ -109,6 +126,7 @@
               <p class="publication__like">Нравится: <span>150</span></p>
             </div>
           </li>
+          <!-- publication item -->
           <li class="publication__item">
             <img class="publication__img" src="img/catalog/photo-6-mobile.jpg" width="320" height="137" alt="#">
             <div class="publication__inner">
@@ -118,25 +136,30 @@
             </div>
           </li>
         </ul>
-
+        <!-- catalog publication end -->
         <p class="catalog__slogan">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
       </div>
     </section>
-
+    <!-- section catalog end -->
+    <!-- section editor -->
     <section class="editor">
       <div class="editor__wrapper container">
         <h2 class="visually-hidden">Быстрый редактор фотографий</h2>
         <img class="editor__img" src="img/catalog/photo-7-mobile.jpg" width="280" height="374" alt="#">
 
+        <!-- editor form/ блок редактирования и отправки фотографии -->
         <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
 
+          <!-- editor action/ список возможных действий для редактирования фотографии -->
           <nav class="editor__list-action">
+            <!-- action item -->
             <button class="editor__action editor__action--current" type="button" data-tab="#tab-1">
               <svg class="editor__icon editor__icon--crop" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z"/>
               </svg>
               <span class="visually-hidden">Кардирование изображения</span>
             </button>
+            <!-- action item -->
             <button class="editor__action" type="button" data-tab="#tab-2">
               <svg class="editor__icon editor__icon--fill" width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M33.12 17.88L15.24 0L12.41 2.83L17.17 7.59L6.88 17.88C6.3182 18.4425 6.00264 19.205 6.00264 20C6.00264 20.795 6.3182 21.5575 6.88 22.12L17.88 33.12C18.4425 33.6818 19.205 33.9974 20 33.9974C20.795 33.9974 21.5575 33.6818 22.12 33.12L33.12 22.12C33.6818 21.5575 33.9974 20.795 33.9974 20C33.9974 19.205 33.6818 18.4425 33.12 17.88ZM10.41 20L20 10.42L29.59 20H10.41ZM38 23C38 23 34 27.33 34 30C34 31.0609 34.4214 32.0783 35.1716 32.8284C35.9217 33.5786 36.9391 34 38 34C39.0609 34 40.0783 33.5786 40.8284 32.8284C41.5786 32.0783 42 31.0609 42 30C42 27.33 38 23 38 23Z"/>
@@ -144,6 +167,7 @@
               </svg>
               <span class="visually-hidden">Заливка изображения цветом</span>
             </button>
+            <!-- action item -->
             <button class="editor__action" type="button" data-tab="#tab-3">
               <svg class="editor__icon editor__icon--contrast" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 4C18.3734 4 20.6935 4.70379 22.6669 6.02236C24.6402 7.34094 26.1783 9.21509 27.0866 11.4078C27.9948 13.6005 28.2325 16.0133 27.7694 18.3411C27.3064 20.6689 26.1635 22.8071 24.4853 24.4853C22.8071 26.1635 20.6689 27.3064 18.3411 27.7694C16.0133 28.2324 13.6005 27.9948 11.4078 27.0866C9.21509 26.1783 7.34095 24.6402 6.02237 22.6668C4.70379 20.6935 4.00001 18.3734 4.00001 16C4.00001 12.8174 5.26429 9.76515 7.51473 7.51472C9.76516 5.26428 12.8174 4 16 4ZM16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0Z"/>
@@ -152,8 +176,10 @@
               <span class="visually-hidden">Добавление яркости и контрастности изображению</span>
             </button>
           </nav>
-
+          <!-- editor action end -->
+          <!-- editor filter/ блок управления фильтрами -->
           <ul class="editor__filter">
+            <!-- filter item -->
             <li class="editor__filter-item editor__filter-item--crop editor__item-active" id="tab-1">
               <div class="editor__filter-scale">
                 <div class="editor__filter-progress editor__filter-progress--crop">
@@ -163,6 +189,7 @@
                 </div>
               </div>
             </li>
+            <!-- filter item -->
             <li class="editor__filter-item editor__filter-item--fill" id="tab-2">
               <div class="editor__filter-scale">
                 <div class="editor__filter-progress editor__filter-progress--fill">
@@ -172,6 +199,7 @@
                 </div>
               </div>
             </li>
+            <!-- filter item -->
             <li class="editor__filter-item editor__filter-item--contrast" id="tab-3">
               <div class="editor__filter-scale">
                 <div class="editor__filter-progress editor__filter-progress--contrast">
@@ -182,17 +210,23 @@
               </div>
             </li>
           </ul>
-
+          <!-- editor filter end -->
+          <!-- editor button-submit/reset -->
           <div class="editor__button-container">
             <button class="editor__button editor__button--submit" type="submit" aria-label="Опубликовать фотографию">Запостить</button>
             <button class="editor__button editor__button--reset" type="reset" aria-label="Отменить публикацию фотографии">Отмена</button>
           </div>
         </form>
+        <!-- editor form end -->
       </div>
     </section>
+    <!-- section editor end -->
   </main>
+  <!-- main page-main end -->
+  <!-- footer page-footer -->
   <footer class="page-footer">
     <div class="page-footer__wrapper page-footer__wrapper--catalog container">
+      <!-- page-footer logo -->
       <a class="page-footer__logo logo">
         <svg width="147" height="40" viewBox="0 0 147 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M72.1933 18.4249C72.1932 18.0921 72.3255 17.7725 72.562 17.5345C72.7985 17.2965 73.1204 17.1589 73.4588 17.1511H80.6703C85.7826 17.1511 89.1473 19.827 89.1473 24.211V24.2703C89.1473 29.069 85.0695 31.5573 80.2484 31.5573H74.7544V38.2913C74.7702 38.466 74.7488 38.642 74.6916 38.8082C74.6344 38.9743 74.5426 39.1269 74.4222 39.2563C74.3017 39.3856 74.1552 39.489 73.992 39.5596C73.8287 39.6303 73.6522 39.6668 73.4738 39.6668C73.2954 39.6668 73.119 39.6303 72.9557 39.5596C72.7925 39.489 72.6459 39.3856 72.5255 39.2563C72.405 39.1269 72.3133 38.9743 72.2561 38.8082C72.1989 38.642 72.1775 38.466 72.1933 38.2913V18.4249ZM80.3489 29.2863C84.0952 29.2863 86.556 27.3115 86.556 24.3493V24.29C86.556 21.1106 84.1354 19.4616 80.5297 19.4616H74.8047V29.2468L80.3489 29.2863Z" fill="#283645"/>
@@ -207,8 +241,9 @@
           <path d="M10.785 33.6406C10.056 33.6354 9.35856 33.347 8.84491 32.8384C8.33126 32.3297 8.04302 31.642 8.04303 30.9253C8.04304 31.6437 7.75342 32.3329 7.2376 32.8419C6.72178 33.3508 6.02182 33.638 5.29102 33.6406C6.02182 33.6433 6.72178 33.9305 7.2376 34.4394C7.75342 34.9484 8.04304 35.6375 8.04303 36.356C8.04302 35.6392 8.33126 34.9516 8.84491 34.4429C9.35856 33.9342 10.056 33.6459 10.785 33.6406Z" fill="#283645"/>
         </svg>
       </a>
-
+      <!-- page-footer social list/ список аккаунтов в социальной сети -->
       <ul class="page-footer__social social">
+        <!-- social item -->
         <li class="social__item">
           <a class="social__link" href="#">
             <svg class="social__icon social__icon--twitter" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -217,6 +252,7 @@
             <span class="visually-hidden">Мы в Твиттере</span>
           </a>
         </li>
+        <!-- social item -->
         <li class="social__item">
           <a class="social__link" href="https://www.facebook.com/htmlacademy">
             <svg class="social__icon social__icon--facebook" width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -225,6 +261,7 @@
             <span class="visually-hidden">Мы в Фейсбуке</span>
           </a>
         </li>
+        <!-- social item -->
         <li class="social__item">
           <a class="social__link" href="#">
             <svg class="social__icon social__icon--youtube" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,6 +271,8 @@
           </a>
         </li>
       </ul>
+      <!-- page-footer social list end -->
+      <!-- page-footer copyright/ блок информации о разработчике приложения -->
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -244,9 +283,14 @@
           </a>
         </p>
       </div>
+      <!-- page-footer copyright end -->
     </div>
   </footer>
+  <!-- footer page-footer end -->
+
+  <!-- скрипт, отвечающий за меню сайта -->
   <script src="js/main-nav.js"></script>
+  <!-- скрипт, отвечающий за блок редактирования фотографий -->
   <script src="js/app.js"></script>
 </body>
 </html>

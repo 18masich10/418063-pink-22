@@ -1,0 +1,115 @@
+// Style.less для блока modal
+//---------------------------
+
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //display: none; временно, потом отключить
+  width: 320px;
+  margin: auto;
+  background-color: @bg-white;
+  border: none;
+  z-index: 20;
+}
+
+// сообщение - ошибка в заполнении формы
+.modal__error {
+  display: none; // временно
+  position: fixed;
+  top: 50%;
+  bottom: auto;
+  box-shadow: @modal-box-shadow;
+}
+
+// сообщение - заявка отправлена
+.modal__submit {
+  display: none; // временно
+  position: fixed;
+  top: 50%;
+  bottom: auto;
+  box-shadow: @modal-box-shadow;
+}
+
+.modal__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  &--error {
+    padding: 39px 0 50px;
+  }
+
+  &--submit {
+    padding: 39px 0 0;
+  }
+}
+
+.modal__title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: @color-blue-darker;
+}
+
+.modal__description {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 42px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: @color-blue-darker;
+
+  &--error {
+    margin-bottom: 42px;
+  }
+
+  &--submit {
+    margin-bottom: 33px;
+  }
+}
+
+.modal__button-bg {
+  padding: 51px 0;
+  margin: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: @bg-gray-lighter;
+}
+
+.modal__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  padding: 16px 63px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @color-white;
+  background-color: @bg-btn-green;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @bg-btn-green-hover;
+  }
+
+  &:active,
+  &:focus-within {
+    color: rgba(@color-white, 0.3);
+    background-color: @bg-btn-green-hover;
+  }
+}
