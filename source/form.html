@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page__body">
   <header class="page-header">
@@ -17,25 +22,25 @@
         </picture>
       </a>
 
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="Показать навигацию по сайти">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Фотографии</a>
-            </li>
-            <li class="site-list__item site-list__item--current">
-              <a>Конкурс</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">HTML academy</a>
-            </li>
-          </ul>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current ">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">HTML academy</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -49,7 +54,7 @@
     </section>
 
     <section class="contest">
-      <div class="contest__wrapper container">
+      <div class="contest__wrapper">
         <h2 class="contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
           на вашу бонусную карту!<span class="contest__subtitle">Пожалуйста, заполните форму ниже:</span></h2>
 
@@ -57,15 +62,15 @@
           <fieldset class="contest__fieldset contest__fieldset--data">
             <legend class="visually-hidden contest__legend contest__legend--data">Ваши персональные данные</legend>
             <ul class="contest__fieldset-list contest__fieldset-list--data">
-              <li class="contest__fieldset-item">
+              <li class="contest__fieldset-item contest__fieldset-item--data">
                 <label class="contest__label contest__label--surname" for="surname">Фамилия:</label>
                 <input class="contest__input contest__input--surname" type="text" id="surname" placeholder="Укажите фамилию &#42;">
               </li>
-              <li class="contest__fieldset-item">
+              <li class="contest__fieldset-item contest__fieldset-item--data">
                 <label class="contest__label contest__label--name" for="name">Имя:</label>
                 <input class="contest__input contest__input--name" type="text" id="name" placeholder="Введите ваше имя &#42;">
               </li>
-              <li class="contest__fieldset-item">
+              <li class="contest__fieldset-item contest__fieldset-item--data">
                 <label class="contest__label contest__label--patronymic" for="patronymic">Отчество:</label>
                 <input class="contest__input contest__input--patronymic" type="text" id="patronymic" placeholder="Ну и отчество тоже">
               </li>
@@ -74,42 +79,40 @@
           <fieldset class="contest__fieldset contest__fieldset--progress">
             <legend class="contest__legend contest__legend--progress">Ваши безбашенные достижения в путешествии</legend>
             <ul class="contest__fieldset-list contest__fieldset-list--progress">
-              <div class="contest__fildset-item-container">
-                <li class="contest__fieldset-item">
-                  <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="selfie"
-                    name="progress" value="selfie" checked>
-                  <label class="contest__label contest__label--progress" for="selfie">Сделал селфи с акулой</label>
-                </li>
-                <li class="contest__fieldset-item">
-                  <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="tan"
-                    name="progress" value="tan" checked>
-                  <label class="contest__label contest__label--progress" for="tan">Обгорел на пляже</label>
-                </li>
-              </div>
-              <div class="contest__fildset-item-container">
-                <li class="contest__fieldset-item">
-                  <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="celebrity"
-                    name="progress" value="celebrity">
-                  <label class="contest__label contest__label--progress" for="celebrity">Видел Чака Норриса</label>
-                </li>
-                <li class="contest__fieldset-item">
-                  <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="souvenirs"
-                    name="progress" value="souvenirs">
-                  <label class="contest__label contest__label--progress" for="souvenirs">Накупил сувениров</label>
-                </li>
-              </div>
-              <div class="contest__fildset-item-container">
-                <li class="contest__fieldset-item">
-                  <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="sight"
-                    name="progress" value="sight" checked>
-                  <label class="contest__label contest__label--progress" for="sight">Удержал башню</label>
-                </li>
-                <li class="contest__fieldset-item">
-                  <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="damage"
-                    name="progress" value="damage">
-                  <label class="contest__label contest__label--progress" for="damage">Разгромил отель</label>
-                </li>
-              </div>
+              <li class="contest__fieldset-item contest__fieldset-item--progress">
+                <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="selfie"
+                  name="progress" value="selfie" checked>
+                <label class="contest__label contest__label--progress" for="selfie">Сделал селфи с акулой</label>
+              </li>
+              <li class="contest__fieldset-item contest__fieldset-item--progress">
+                <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="tan"
+                  name="progress" value="tan" checked>
+                <label class="contest__label contest__label--progress" for="tan">Обгорел на пляже</label>
+              </li>
+            </ul>
+            <ul class="contest__fieldset-list contest__fieldset-list--progress">
+              <li class="contest__fieldset-item contest__fieldset-item--progress">
+                <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="celebrity"
+                  name="progress" value="celebrity">
+                <label class="contest__label contest__label--progress" for="celebrity">Видел Чака Норриса</label>
+              </li>
+              <li class="contest__fieldset-item contest__fieldset-item--progress">
+                <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="souvenirs"
+                  name="progress" value="souvenirs">
+                <label class="contest__label contest__label--progress" for="souvenirs">Накупил сувениров</label>
+              </li>
+            </ul>
+            <ul class="contest__fieldset-list contest__fieldset-list--progress">
+              <li class="contest__fieldset-item contest__fieldset-item--progress">
+                <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="sight"
+                  name="progress" value="sight" checked>
+                <label class="contest__label contest__label--progress" for="sight">Удержал башню</label>
+              </li>
+              <li class="contest__fieldset-item contest__fieldset-item--progress">
+                <input class="visually-hidden contest__input contest__input--checkbox" type="checkbox" id="damage"
+                  name="progress" value="damage">
+                <label class="contest__label contest__label--progress" for="damage">Разгромил отель</label>
+              </li>
             </ul>
           </fieldset>
           <fieldset class="contest__fieldset contest__fieldset--contacts-data">
@@ -127,16 +130,16 @@
           </fieldset>
           <fieldset class="contest__fieldset contest__fieldset--device">
             <legend class="contest__legend contest__legend--device">С каким приложением путешествовали?</legend>
-            <ul class="contest__fieldset-list">
-              <li class="contest__fieldset-item">
+            <ul class="contest__fieldset-list contest__fieldset-list--device">
+              <li class="contest__fieldset-item contest__fieldset-item--device">
                 <input class="visually-hidden contest__input contest__input--radio" type="radio" id="ios" name="device" value="ios" checked>
                 <label class="contest__label contest__label--device" for="ios">Pink для iOS</label>
               </li>
-              <li class="contest__fieldset-item">
+              <li class="contest__fieldset-item contest__fieldset-item--device">
                 <input class="visually-hidden contest__input contest__input--radio" type="radio" id="android" name="device" value="android">
                 <label class="contest__label contest__label--device" for="android">Pink на Android</label>
               </li>
-              <li class="contest__fieldset-item">
+              <li class="contest__fieldset-item contest__fieldset-item--device">
                 <input class="visually-hidden contest__input contest__input--radio" type="radio" id="windows" name="device" value="windows">
                 <label class="contest__label contest__label--device" for="windows">Windows Phone</label>
               </li>
@@ -145,13 +148,13 @@
           <fieldset class="contest__fieldset contest__fieldset--feeling">
             <legend class="contest__legend contest__legend--feeling">Опишите свои эмоции</legend>
             <label class="visually-hidden contest__label contest__label--feeling">Ваш ответ</label>
-            <textarea class="contest__input contest__input--feeling" name="text" cols="30" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="contest__input contest__input--feeling" name="text" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
           <div class="contest__button-container">
             <button class="contest__button" type="submit" aria-label="Отправить карточку участника конкурса на рассмотрение">Отправить форму</button>
-            <p class="contest__input-main">
-              <span class="contest__input-main--icon">&#42;</span> — обязательные <span class="contest__input-main--span">для заполнения</span> поля</p>
+            <p class="contest__input-description">
+              <span class="contest__input-symbol">&#42;</span> — обязательные <span class="contest__input-subdescription">для заполнения</span> поля</p>
           </div>
         </form>
       </div>
@@ -206,12 +209,13 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">HTML Academy</span>
             <svg class="copyright__icon" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#D22856"/>
+              <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"/>
             </svg>
           </a>
         </p>
       </div>
     </div>
   </footer>
+  <script src="js/main-nav.js"></script>
 </body>
 </html>

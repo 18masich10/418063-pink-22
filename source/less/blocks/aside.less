@@ -5,7 +5,7 @@
   display: none;
 }
 
-// От 660px планшетная версия
+// от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .aside {
     display: block;
@@ -18,76 +18,85 @@
     column-gap: 70px;
   }
 
-  .aside__icon {
+  .aside__img {
     padding: 54px 0;
   }
 
   .aside__description {
-    padding: 97px 0;
+    padding: 0;
+    padding-top: 96px;
+  }
 
-    h2 {
-      width: 205px;
-      padding: 0;
-      margin: 0;
-      margin-bottom: 10px;
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 36px;
-      text-align: left;
-    }
+  .aside__title {
+    width: 205px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+  }
 
-    p {
-      padding: 0;
-      margin: 0;
-      margin-bottom: 10px;
-    }
+  .aside__text {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+  }
 
-    a {
-      padding: 0;
-      margin: 0;
-      color: @color-pink-bright;
-    }
+  .aside__br-desktop {
+    display: none;
+  }
+
+  .aside__link {
+    padding: 0;
+    margin: 0;
+    color: @color-pink-bright;
   }
 }
 
 // от 1200px десктопная версия
 @media (min-width: @desktop-width) {
+  .aside {
+    background-color: @bg-gray-lighter;
+  }
+
   .aside__wrapper {
-    display: grid;
     grid-template-columns: min-content 570px;
     column-gap: 72px;
   }
 
-  .aside__icon {
-    padding: 67px 0 61px;
+  .aside__img {
+    padding: 68px 0 60px;
+  }
 
-    svg {
-      width: 298px;
-      height: 345px;
-    }
+  .aside__icon {
+    width: 298px;
+    height: 345px;
   }
 
   .aside__description {
-    padding: 0;
-    padding-top: 161px;
+    padding-top: 160px;
+  }
 
-    h2 {
-      width: 400px;
-      margin-bottom: 22px;
-    }
+  .aside__title {
+    width: 400px;
+    margin-bottom: 22px;
+  }
 
-    p {
-      width: 520px;
-      font-size: 18px;
-      line-height: 30px;
-      padding: 0;
-      margin: 0;
-      margin-bottom: 30px;
-    }
+  .aside__text {
+    width: 530px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
 
-    a {
-      font-size: 18px;
-      line-height: 30px;
-    }
+  .aside__br-desktop {
+    display: block;
+  }
+
+  .aside__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

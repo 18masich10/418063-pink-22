@@ -19,7 +19,8 @@
   box-shadow: 0 1px 0 @border-black;
 }
 
-.site-list__item a {
+.site-list__link {
+  position: relative;
   display: block;
   padding: 16px 0;
   font-size: 18px;
@@ -28,6 +29,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @color-white;
+
+  &:hover {
+    color: @color-pink-bright;
+  }
+
+  &:active,
+  &:focus-within {
+    color: @color-pink-bright;
+    opacity: 0.3;
+  }
 }
 
 // от 1200px десктопная версия
@@ -35,7 +46,6 @@
   .site-list {
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     width: 650px;
     box-shadow: none;
   }
@@ -46,21 +56,44 @@
     margin-right: 37px;
     box-shadow: none;
 
-    &--current {
-      border-bottom: 1px solid @color-white;
-    }
-
     &:last-child {
       margin-left: 10px;
       margin-right: 0;
     }
   }
 
-  .site-list__item a {
+  .site-list__link {
+    position: relative;
     padding: 13px 0;
     line-height: 18px;
     font-weight: 400;
     text-transform: capitalize;
-    text-decoration: none;
+
+    &--current {
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 11px;
+        content: " ";
+        display: block;
+        width: 107px;
+        border: 1px solid @border-white;
+      }
+    }
+
+    &:hover,
+    &:hover::before {
+      color: @color-pink-bright;
+      border-color: @border-pink-bright;
+    }
+
+    &:active,
+    &:focus-within,
+    &:active::before,
+    &:focus-within::before {
+      color: @color-white;
+      border-color: @border-white;
+      opacity: 0.3;
+    }
   }
 }

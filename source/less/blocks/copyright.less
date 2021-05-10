@@ -28,7 +28,21 @@
   margin-left: 15px;
 }
 
-// От 660px планшетная версия
+.copyright__icon {
+  fill: @fill-icon-pink-bright;
+
+  &:hover {
+    fill: @fill-icon-blue-darker;
+  }
+
+  &:active,
+  &:focus-within {
+    fill: @fill-icon-blue-darker;
+    opacity: 0.3;
+  }
+}
+
+// от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .copyright {
     flex-direction: row-reverse;

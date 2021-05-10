@@ -7,7 +7,7 @@
 }
 
 .editor__wrapper {
-  padding: 18px 0 41px;
+  padding: 20px 0 41px;
 }
 
 .editor__img {
@@ -16,7 +16,7 @@
   height: 374px;
   padding: 0;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 42px;
 }
 
 .editor__form {
@@ -43,43 +43,45 @@
   border: 0;
   background-color: transparent;
 
+  &--current .editor__icon {
+    fill: @fill-icon-pink-bright;
+    opacity: 1;
+  }
+
   &:last-child {
     margin-right: 0;
   }
+}
 
-  path {
-    fill: @fill-icon-blue-darker;
-    opacity: 0.3;
+.editor__icon {
+  fill: @fill-icon-blue-darker;
+  opacity: 0.3;
 
-    &--crop {
-      width: 44px;
-      height: 44px;
-    }
-
-    &--fill {
-      width: 48px;
-      height: 43px;
-    }
-
-    &--contrast {
-      width: 32px;
-      height: 32px;
-    }
+  &--crop {
+    width: 44px;
+    height: 44px;
   }
 
-  &--current {
-    path {
-      fill: @fill-icon-pink-bright;
-      opacity: 1;
-    }
+  &--fill {
+    width: 48px;
+    height: 43px;
   }
 
-  &:focus {
-    path {
-      fill: @fill-icon-pink-bright;
-      opacity: 1;
-    }
+  &--contrast {
+    width: 32px;
+    height: 32px;
   }
+}
+
+.editor__action:hover .editor__icon {
+  fill: @fill-icon-blue-darker;
+  opacity: 0.5;
+}
+
+.editor__action:active .editor__icon,
+.editor__action:focus-within .editor__icon {
+  fill: @fill-icon-pink-bright;
+  opacity: 1;
 }
 
 .editor__filter {
@@ -151,6 +153,11 @@
   &--contrast {
     left: 115px;
   }
+
+  &:active,
+  &:focus-within {
+    background-color: @bg-pink-bright;
+  }
 }
 
 .editor__button-container {
@@ -164,10 +171,11 @@
 .editor__button {
   display: flex;
   flex-wrap: wrap;
+  font-family: @base-font;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
-  padding: 15px 0;
+  padding: 15px 0 16px;
   margin: 0;
   border-radius: 30px;
   box-sizing: border-box;
@@ -176,9 +184,20 @@
   &--submit {
     padding-left: 88px;
     padding-right: 88px;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
     color: @color-pink-bright;
     border: 3px solid @border-pink-bright;
+
+    &:hover {
+      color: @color-white;
+      background-color: @bg-pink-bright;
+    }
+
+    &:active,
+    &:focus-within {
+      color: rgba(@color-white, 0.3);
+      background-color: @bg-pink-bright;
+    }
   }
 
   &--reset {
@@ -186,10 +205,22 @@
     padding-right: 101px;
     color: rgba(@color-blue-darker, 0.1);
     border: 3px solid rgba(@border-blue-darker, 0.1);
+
+    &:hover {
+      color: rgba(@color-blue-darker, 0.3);
+      border-color: rgba(@border-blue-darker, 0.3);
+    }
+
+    &:active,
+    &:focus-within {
+      color: rgba(@color-white, 0.3);
+      background-color: rgba(@bg-blue-darker, 0.3);
+      border: none;
+    }
   }
 }
 
-// От 660px планшетная версия
+// от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .editor__wrapper {
     display: grid;
@@ -290,7 +321,6 @@
 // от 1200px десктопная версия
 @media (min-width: @desktop-width) {
   .editor__wrapper {
-    display: grid;
     grid-template-columns: max-content 1fr;
     column-gap: 20px;
     padding: 54px 0;
@@ -302,6 +332,7 @@
 
   .editor__filter {
     width: 400px;
+    padding-top: 20px;
     margin-bottom: 91px;
   }
 

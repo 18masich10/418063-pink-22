@@ -5,7 +5,7 @@
   width: 100%;
   padding: 0;
   padding-top: 28px;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
   margin: 0;
 }
 
@@ -23,15 +23,27 @@
   color: @color-white;
   border: 2px solid @border-white;
   border-radius: 30px;
+
+  &:hover {
+    color: @color-pink-bright;
+    background-color: @bg-white;
+  }
+
+  &:active,
+  &:focus-within {
+    color: rgba(@color-pink-bright, 0.3);
+    background-color: @bg-white;
+  }
 }
 
 .download__list {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  justify-content: center;
+  justify-content: flex-start;
   column-gap: 35px;
+  width: 208px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 21px;
   list-style: none;
 }
@@ -78,7 +90,7 @@
   color: @color-white;
 }
 
-// От 660px планшетная версия
+// от 660px планшетная версия
 @media (min-width: @tablet-width) {
   .download {
     width: 300px;
@@ -86,15 +98,14 @@
 
   .download__button {
     padding: 16px 28px;
-    margin-bottom: 45px;
+    margin-bottom: 46px;
   }
 
   .download__list {
-    margin-bottom: 34px;
+    margin-bottom: 33px;
   }
 
   .download__description {
-    display: block;
     width: 295px;
     font-size: 18px;
   }
@@ -109,7 +120,6 @@
   .download__button {
     width: 258px;
     padding: 18px;
-    margin: 0;
     margin-bottom: 67px;
     font-size: 21px;
   }
