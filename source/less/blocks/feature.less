@@ -210,21 +210,37 @@
       width: 300px;
       height: 300px;
       background-repeat: no-repeat;
+      background-position: 0 0;
     }
 
     &--good-mood::before {
       margin: 0 53px;
       background-image: url("../img/feature/feature-img-desktop-1.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/feature/feature-img-desktop-1@2x.png");
+        background-size: 186px auto;
+      }
     }
 
     &--creativity::before {
       margin: 0 56px;
       background-image: url("../img/feature/feature-img-desktop-2.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/feature/feature-img-desktop-2@2x.png");
+        background-size: 186px auto;
+      }
     }
 
     &--communication::before {
       margin: 0 59px;
       background-image: url("../img/feature/feature-img-desktop-3.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/feature/feature-img-desktop-3@2x.png");
+        background-size: 186px auto;
+      }
     }
 
     &:last-child {

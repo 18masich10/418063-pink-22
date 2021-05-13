@@ -22,7 +22,7 @@
   margin: 0;
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
   overflow-y: hidden;
 }
 
@@ -30,9 +30,6 @@
   position: absolute;
   display: block;
   width: 836px;
-  height: 279px;
-  border-collapse: collapse;
-  border: 1px solid @border-gray-light;
 }
 
 .price__row {
@@ -40,7 +37,8 @@
   line-height: 30px;
   text-transform: uppercase;
   color: @color-blue-darker;
-  border: 1px solid @border-gray-light;
+  border-bottom: 2px solid @border-gray-light;
+  border-right: 2px solid @border-gray-light;
 }
 
 .price__tariff {
@@ -58,7 +56,7 @@
   text-transform: uppercase;
   text-align: center;
   color: @color-white;
-  border: 1px solid @border-gray-light;
+  border-left: 2px solid @border-gray-light;
   background-color: @bg-blue-darker;
   overflow: hidden;
 
@@ -111,7 +109,7 @@
   &--mobile-opened {
     display: block;
     width: 237px;
-    padding: 10px 20px 16px;
+    padding: 11px 20px 16px;
     font-size: 14px;
     text-align: left;
     text-transform: uppercase;
@@ -185,6 +183,7 @@
 
     &:first-child {
       border: 0;
+      border-right: 2px solid @border-gray-light;
     }
 
     &:last-child {
@@ -193,12 +192,12 @@
   }
 
   .price__tariff {
-    width: 152px;
+    width: 151px;
     padding: 12px 0 9px 1px;
     font-size: 16px;
     font-weight: 700;
     justify-content: center;
-    border: 1px solid @border-gray-lighter;
+    //border-right: 2px solid @border-gray-lighter;
 
     &--mobile-invisible {
       display: block;
@@ -220,8 +219,8 @@
   }
 
   .price__option {
-    width: 125px;
-    padding: 6px 14px 9px;
+    width: 126px;
+    padding: 6px 12px 9px;
     font-size: 14px;
 
     &--mobile-invisible {
@@ -238,12 +237,12 @@
 
     &--selected::after {
       top: 10px;
-      left: 60px;
+      left: 61px;
     }
 
     &--not-selected::after {
       top: 7px;
-      left: 62px;
+      left: 63px;
     }
   }
 
@@ -264,8 +263,12 @@
     height: 285px;
   }
 
+  .price__list {
+    width: 100%;
+  }
+
   .price__tariff {
-    width: 233px;
+    width: 231px;
     padding: 16px 0 22px 1px;
     font-size: 18px;
 
@@ -282,13 +285,13 @@
   }
 
   .price__option {
-    width: 195px;
-    padding: 11px 19px 18px;
+    width: 198px;
+    padding: 12px 16px 16px;
     font-size: 18px;
   }
 
   .price__status {
-    width: 231px;
+    width: 230px;
 
     &--selected::after {
       top: 16px;
