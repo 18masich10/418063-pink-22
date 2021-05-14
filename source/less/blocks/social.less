@@ -33,12 +33,6 @@
   }
 }
 
-.social__item:active .social__icon,
-.social__item:focus-within .social__icon {
-  fill: @fill-icon-pink-bright;
-  opacity: 0.3;
-}
-
 .social__link {
   display: flex;
   flex-wrap: wrap;
@@ -50,7 +44,7 @@
 
 .social__icon {
   display: block;
-  fill: @fill-icon-pink-bright;
+  color: @fill-icon-pink-bright;
 
   &--twitter {
     width: 18px;
@@ -66,6 +60,12 @@
     width: 15px;
     height: 13px;
   }
+}
+
+.social__link:active .social__icon,
+.social__link:focus-within .social__icon {
+  color: @fill-icon-pink-bright;
+  opacity: 0.3;
 }
 
 // от 1200px десктопная версия
