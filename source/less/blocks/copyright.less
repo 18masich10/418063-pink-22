@@ -30,16 +30,17 @@
 
 .copyright__icon {
   fill: @fill-icon-pink-bright;
+}
 
-  &:hover {
-    fill: @fill-icon-blue-darker;
-  }
 
-  &:active,
-  &:focus-within {
-    fill: @fill-icon-blue-darker;
-    opacity: 0.3;
-  }
+.copyright__text:hover .copyright__icon {
+  fill: @fill-icon-blue-darker;
+}
+
+.copyright__text:active .copyright__icon,
+.copyright__text:focus-within .copyright__icon {
+  fill: @fill-icon-blue-darker;
+  opacity: 0.3;
 }
 
 // от 660px планшетная версия

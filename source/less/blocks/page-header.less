@@ -15,8 +15,8 @@
 
 .page-header__logo-link {
   display: block;
-  width: 50%;
-  padding: 22px 20px;
+  width: 130px;
+  text-decoration: none;
 }
 
 .page-header__logo {
@@ -28,17 +28,35 @@
 }
 
 .page-header__logo-img {
+  padding: 22px 20px;
+
+  &--mobile {
+    display: block;
+    width: 74px;
+    height: 23px;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
+.page-header__logo-text:not(.nohover) {
   width: 74px;
   height: 23px;
-  fill: @fill-icon-white;
+  color: @fill-icon-white;
 
   &:hover {
-    fill: @fill-icon-pink-bright;
+    color: @fill-icon-pink-bright;
   }
 
   &:active,
-  &:focus-within {
-    fill: @fill-icon-white;
+  &:focus {
+    color: @fill-icon-white;
     opacity: 0.3;
   }
 }
@@ -50,7 +68,7 @@
   }
 
   .page-header__logo-link {
-    padding: 23px 20px 39px;
+    width: 200px;
   }
 
   .page-header__logo {
@@ -58,8 +76,36 @@
   }
 
   .page-header__logo-img {
-    width: 145px;
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+      width: 180px;
+      height: 40px;
+      padding: 27px 10px 43px;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .page-header__logo-icon {
+    width: 59px;
     height: 40px;
+    color: @fill-icon-white;
+  }
+
+  .page-header__logo-text:not(.nohover):hover ~ .page-header__logo-icon {
+    color: @fill-icon-pink-bright;
+  }
+
+  .page-header__logo-text:not(.nohover):active ~ .page-header__logo-icon,
+  .page-header__logo-text:not(.nohover):focus ~ .page-header__logo-icon {
+    color: @fill-icon-white;
+    opacity: 0.3;
   }
 }
 
@@ -74,8 +120,7 @@
   .page-header__logo-link {
     display: grid;
     grid-column-start: 1;
-    width: 150px;
-    padding: 27px 0 40px;
+    width: 260px;
     margin: 0;
   }
 
@@ -85,7 +130,26 @@
   }
 
   .page-header__logo-img {
-    width: 145px;
+    padding: 27px 0 40px;
+
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+      width: 145px;
+      height: 40px;
+    }
+  }
+
+  .page-header__logo-icon {
+    width: 61px;
     height: 40px;
+    color: @fill-icon-white;
+  }
+
+  .page-header__logo-text {
+    color: @fill-icon-white;
   }
 }
