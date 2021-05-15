@@ -69,6 +69,9 @@
           <p class="promo__slogan promo__slogan--index">Взгляните на жизнь иначе!</p>
 
           <picture class="promo__img">
+            <source media="(min-width: 1200px)" srcset="img/promo/promo-img-desktop.webp 1x, img/promo/promo-img-desktop@2x.webp 2x">
+            <source media="(min-width: 660px)" srcset="img/promo/promo-img-tablet.webp 1x, img/promo/promo-img-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/promo/promo-img.webp 1x, img/promo/promo-img@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/promo/promo-img-desktop.png 1x, img/promo/promo-img-desktop@2x.png 2x">
             <source media="(min-width: 660px)" srcset="img/promo/promo-img-tablet.png 1x, img/promo/promo-img-tablet@2x.png 2x">
             <img class="promo__picture" src="img/promo/promo-img.png" srcset="img/promo/promo-img@2x.png 2x" width="320" height="286"
@@ -129,6 +132,8 @@
 
           <div class="feature__inner">
             <picture class="feature__img">
+              <source media="(min-width: 660px)" srcset="img/feature/feature-img-tablet.webp 1x, img/feature/feature-img-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/feature/feature-img.webp 1x, img/feature/feature-img@2x.webp 2x">
               <source media="(min-width: 660px)" srcset="img/feature/feature-img.png 1x, img/feature/feature-img@2x.png 2x">
               <img class="feature__picture" src="img/feature/feature-img.png" srcset="img/feature/feature-img@2x.png 2x" width="157" height="320"
                 alt="Изображение телефона с применением основных преимуществ приложения (фотография в розовых тонах, с использованием дополнительных
@@ -425,7 +430,7 @@
         <!-- page-footer copyright/ блок информации о разработчике приложения -->
         <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Логотип htmlacademy">
               <span class="visually-hidden">HTML Academy</span>
               <svg class="copyright__icon" width="27" height="34">
                 <use xlink:href="img/sprite.svg#icon-copyright"></use>
