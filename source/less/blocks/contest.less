@@ -206,7 +206,7 @@
     left: -13px;
     width: 22px;
     height: 16px;
-    background-image: url("../img/custom-icon/tick.svg");
+    background-image: url("../img/custom-icons/tick.svg");
     background-repeat: no-repeat;
     z-index: 1;
   }
@@ -451,6 +451,7 @@
     }
 
     &--contacts-data {
+      position: relative;
       flex-direction: column-reverse;
       margin-bottom: 29px;
     }
@@ -484,6 +485,54 @@
     &--device {
       padding-left: 119px;
       margin-bottom: -8px;
+    }
+  }
+
+  .contest__label-tel {
+    &::after {
+      position: absolute;
+      content: " ";
+      top: 1px;
+      right: 1px;
+      width: 59px;
+      height: 59px;
+      background-color: @bg-gray;
+    }
+
+    &::before {
+      position: absolute;
+      content: " ";
+      top: 21px;
+      right: 20px;
+      width: 20px;
+      height: 19px;
+      background-image: url("../img/custom-icons/icon-phone.svg");
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+  }
+
+  .contest__label-mail {
+    &::after {
+      position: absolute;
+      content: " ";
+      top: 2px;
+      right: 1px;
+      width: 59px;
+      height: 57px;
+      background-color: @bg-gray;
+    }
+
+    &::before {
+      position: absolute;
+      content: " ";
+      top: 24px;
+      right: 21px;
+      width: 18px;
+      height: 13px;
+      background-image: url("../img/custom-icons/icon-mail.svg");
+      background-repeat: no-repeat;
+      z-index: 1;
     }
   }
 
@@ -706,6 +755,28 @@
       width: 140px;
       padding-left: 134px;
       margin-bottom: -7px;
+    }
+  }
+
+  .contest__label-tel {
+    &::after {
+      right: 38px;
+    }
+
+    &::before {
+      right: 57px;
+    }
+  }
+
+  .contest__label-mail {
+    &::after {
+      height: 58px;
+      top: 1px;
+      right: 38px;
+    }
+
+    &::before {
+      right: 57px;
     }
   }
 
