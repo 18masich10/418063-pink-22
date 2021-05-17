@@ -46,7 +46,6 @@ const html = () => {
 const scripts = () => {
   return gulp.src("source/js/**/*.js")
     .pipe(terser())
-    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -87,7 +86,7 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src("source/img/icons/**/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))

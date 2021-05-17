@@ -206,7 +206,7 @@
     left: -13px;
     width: 22px;
     height: 16px;
-    background-image: url("../img/custom-icon/tick.svg");
+    background-image: url("../img/custom-icons/tick.svg");
     background-repeat: no-repeat;
     z-index: 1;
   }
@@ -492,8 +492,8 @@
     &::after {
       position: absolute;
       content: " ";
-      top: 0;
-      right: 0;
+      top: 1px;
+      right: 1px;
       width: 59px;
       height: 59px;
       background-color: @bg-gray;
@@ -506,7 +506,7 @@
       right: 20px;
       width: 20px;
       height: 19px;
-      background-image: url("../img/custom-icon/icon-phone.svg");
+      background-image: url("../img/custom-icons/icon-phone.svg");
       background-repeat: no-repeat;
       z-index: 1;
     }
@@ -516,10 +516,10 @@
     &::after {
       position: absolute;
       content: " ";
-      top: 0;
-      right: 0;
+      top: 2px;
+      right: 1px;
       width: 59px;
-      height: 59px;
+      height: 57px;
       background-color: @bg-gray;
     }
 
@@ -530,7 +530,7 @@
       right: 21px;
       width: 18px;
       height: 13px;
-      background-image: url("../img/custom-icon/icon-mail.svg");
+      background-image: url("../img/custom-icons/icon-mail.svg");
       background-repeat: no-repeat;
       z-index: 1;
     }
@@ -760,7 +760,7 @@
 
   .contest__label-tel {
     &::after {
-      right: 37px;
+      right: 38px;
     }
 
     &::before {
@@ -770,7 +770,9 @@
 
   .contest__label-mail {
     &::after {
-      right: 37px;
+      height: 58px;
+      top: 1px;
+      right: 38px;
     }
 
     &::before {
