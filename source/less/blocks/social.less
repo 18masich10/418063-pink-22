@@ -8,6 +8,10 @@
   padding: 0;
   margin: 0 auto;
   list-style: none;
+
+  @media (min-width: @desktop-width) {
+    width: 180px;
+  }
 }
 
 .social__item {
@@ -22,6 +26,10 @@
   margin-left: 5px;
   border: 3px solid rgba(@border-blue-darker, 0.1);
   border-radius: 50%;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 4px;
+  }
 
   &:hover {
     border: 3px solid rgba(@border-blue-darker, 1);
@@ -66,15 +74,4 @@
 .social__link:focus-within .social__icon {
   fill: @fill-icon-pink-bright;
   opacity: 0.3;
-}
-
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .social {
-    width: 180px;
-  }
-
-  .social__item {
-    margin-left: 4px;
-  }
 }

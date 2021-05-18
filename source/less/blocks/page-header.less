@@ -11,12 +11,33 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    width: 940px;
+  }
 }
 
 .page-header__logo-link {
   display: block;
   width: 130px;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-column-start: 1;
+    width: 260px;
+    margin: 0;
+  }
 }
 
 .page-header__logo {
@@ -25,23 +46,76 @@
   justify-content: flex-start;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 4px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .page-header__logo-img {
+  //padding: 23px 20px;
   padding: 22px 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 0 40px;
+  }
 
   &--mobile {
     display: block;
     width: 74px;
     height: 23px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   &--tablet {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      width: 180px;
+      height: 40px;
+      padding: 27px 10px 43px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 
   &--desktop {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      width: 145px;
+      height: 40px;
+    }
+  }
+}
+
+.page-header__logo-icon {
+  @media (min-width: @tablet-width) {
+    width: 59px;
+    height: 40px;
+    color: @fill-icon-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 61px;
+    height: 40px;
+    color: @fill-icon-white;
   }
 }
 
@@ -61,43 +135,9 @@
   }
 }
 
+
 // от 660px планшетная версия
 @media (min-width: @tablet-width) {
-  .page-header__wrapper {
-    flex-direction: column;
-  }
-
-  .page-header__logo-link {
-    width: 200px;
-  }
-
-  .page-header__logo {
-    padding: 4px 0;
-  }
-
-  .page-header__logo-img {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-      width: 180px;
-      height: 40px;
-      padding: 27px 10px 43px;
-    }
-
-    &--desktop {
-      display: none;
-    }
-  }
-
-  .page-header__logo-icon {
-    width: 59px;
-    height: 40px;
-    color: @fill-icon-white;
-  }
-
   .page-header__logo-text:not(.nohover):hover ~ .page-header__logo-icon {
     color: @fill-icon-pink-bright;
   }
@@ -111,44 +151,6 @@
 
 // от 1200px десктопная версия
 @media (min-width: @desktop-width) {
-  .page-header__wrapper {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    width: 940px;
-  }
-
-  .page-header__logo-link {
-    display: grid;
-    grid-column-start: 1;
-    width: 260px;
-    margin: 0;
-  }
-
-  .page-header__logo {
-    padding: 0;
-    margin: 0;
-  }
-
-  .page-header__logo-img {
-    padding: 27px 0 40px;
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-      width: 145px;
-      height: 40px;
-    }
-  }
-
-  .page-header__logo-icon {
-    width: 61px;
-    height: 40px;
-    color: @fill-icon-white;
-  }
-
   .page-header__logo-text {
     color: @fill-icon-white;
   }

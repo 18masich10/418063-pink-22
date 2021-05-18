@@ -18,6 +18,22 @@
   padding: 0;
   margin: 0 auto;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    &--reviews {
+      display: flex;
+    }
+
+    &--price {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--reviews {
+      display: none;
+    }
+  }
 }
 
 .slider__toggle {
@@ -25,7 +41,7 @@
   height: 12px;
   padding: 0;
   margin: 0;
-  margin-right: 14px;
+  margin-right: 13px;
 
   &:last-child {
     margin-right: 0;
@@ -74,27 +90,15 @@
   }
 }
 
-// от 660px планшетная версия
-@media (min-width: @tablet-width) {
-  .slider__toggles {
-    &--reviews {
-      display: flex;
-    }
-
-    &--price {
-      display: none;
-    }
-  }
-}
-
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .slider__controls {
+.slider__controls {
+  @media (min-width: @desktop-width) {
     position: relative;
     display: flex;
   }
+}
 
-  .slider__control {
+.slider__control {
+  @media (min-width: @desktop-width) {
     position: absolute;
     width: 26px;
     height: 41px;
@@ -105,7 +109,7 @@
 
     &--prev,
     &--next {
-      top: -197px;
+      top: -158px;
       background-repeat: no-repeat;
       background-position: 0 0;
       opacity: 0.3;
@@ -133,12 +137,6 @@
       padding: 0;
       outline: none;
       opacity: 0.1;
-    }
-  }
-
-  .slider__toggles {
-    &--reviews {
-      display: none;
     }
   }
 }

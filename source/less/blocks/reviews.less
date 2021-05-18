@@ -12,6 +12,16 @@
   padding: 0;
   padding-top: 41px;
   padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 46px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 72px;
+    padding-bottom: 34px;
+  }
 }
 
 .reviews__list {
@@ -21,118 +31,14 @@
   margin: 0;
   margin-bottom: 31px;
   list-style: none;
-}
 
-.reviews__item {
-  display: none;
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-
-  &--current {
-    display: flex;
-  }
-}
-
-.reviews__autor {
-  padding: 0;
-  margin: 0;
-
-  &--top {
-    display: block;
-    margin-bottom: 13px;
-  }
-
-  &--bottom {
-    display: none;
-  }
-}
-
-.reviews__autor-name {
-  display: block;
-  width: 280px;
-  padding: 0;
-  margin: 0 auto;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-  color: @color-black;
-  text-align: center;
-}
-
-.reviews__text {
-  display: block;
-  width: 280px;
-  min-height: 180px;
-  padding: 0;
-  margin: 0;
-  line-height: 30px;
-  text-align: center;
-}
-
-.reviews__control {
-  display: none;
-}
-
-.reviews__toggles {
-  display: flex;
-}
-
-// от 660px планшетная версия
-@media (min-width: @tablet-width) {
-  .reviews__wrapper {
-    padding-top: 46px;
-    padding-bottom: 11px;
-  }
-
-  .reviews__list {
+  @media (min-width: @tablet-width) {
     margin-bottom: 39px;
   }
 
-  .reviews__item {
-    align-items: center;
-  }
-
-  .reviews__autor {
-    &--top {
-      display: none;
-    }
-
-    &--bottom {
-      display: block;
-    }
-  }
-
-  .reviews__autor-name {
-    font-size: 20px;
-    margin-bottom: 2px;
-  }
-
-  .reviews__text {
-    width: 620px;
-    min-height: 90px;
-    margin-bottom: 36px;
-    font-size: 18px;
-  }
-
-  .reviews__autor-info {
-    display: block;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-}
-
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .reviews__wrapper {
-    padding-top: 71px;
-    padding-bottom: 78px;
-  }
-
-  .reviews__list {
+  @media (min-width: @desktop-width) {
     position: relative;
+    margin-bottom: 0;
 
     &::before {
       position: relative;
@@ -147,24 +53,113 @@
       background-repeat: no-repeat;
     }
   }
+}
 
-  .reviews__autor-name {
-    font-size: 24px;
+.reviews__item {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+  }
+
+  &--current {
+    display: flex;
+  }
+}
+
+.reviews__autor {
+  padding: 0;
+  margin: 0;
+
+  &--top {
+    display: block;
+    margin-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--bottom {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+}
+
+.reviews__autor-name {
+  display: block;
+  width: 280px;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: @color-black;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
     margin-bottom: 2px;
   }
 
-  .reviews__text {
-    width: 700px;
-    padding: 0 119px;
-    margin-bottom: 35px;
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+}
+
+.reviews__autor-info {
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
 
-  .reviews__autor-info {
+  @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
   }
+}
 
-  .reviews__control {
+.reviews__text {
+  display: block;
+  width: 280px;
+  min-height: 180px;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    min-height: 90px;
+    margin-bottom: 36px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    padding: 0 120px;
+    margin-bottom: 35px;
+  }
+}
+
+.reviews__control {
+  display: none;
+
+  @media (min-width: @desktop-width) {
     display: block;
   }
+}
+
+.reviews__toggles {
+  display: flex;
 }
