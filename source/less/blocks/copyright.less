@@ -6,6 +6,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+  }
 }
 
 .copyright__text {
@@ -16,6 +20,10 @@
   padding: 0;
   margin: 0;
   line-height: 18px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .copyright__link {
@@ -26,6 +34,10 @@
   padding: 0;
   margin: 0;
   margin-left: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 13px;
+  }
 }
 
 .copyright__icon {
@@ -41,22 +53,4 @@
 .copyright__text:focus-within .copyright__icon {
   fill: @fill-icon-blue-darker;
   opacity: 0.3;
-}
-
-// от 660px планшетная версия
-@media (min-width: @tablet-width) {
-  .copyright {
-    flex-direction: row-reverse;
-  }
-}
-
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .copyright__text {
-    font-size: 18px;
-  }
-
-  .copyright__link {
-    margin-left: 13px;
-  }
 }

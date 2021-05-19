@@ -7,12 +7,21 @@
   padding-top: 28px;
   padding-bottom: 30px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 29px;
+    padding-bottom: 24px;
+  }
 }
 
 .download__button {
   display: block;
   width: 240px;
-  padding: 16px;
+  padding: 16px 17px;
   margin: 0 auto;
   margin-bottom: 33px;
   font-size: 18px;
@@ -34,18 +43,39 @@
     color: rgba(@color-pink-bright, 0.3);
     background-color: @bg-white;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 28px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 258px;
+    padding: 17px;
+    margin-bottom: 66px;
+    font-size: 21px;
+  }
 }
 
 .download__list {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 35px;
   width: 208px;
   padding: 0;
   margin: 0 auto;
   margin-bottom: 21px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 37px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .download__item {
@@ -65,18 +95,38 @@
   &--iphone {
     width: 47px;
     height: 56px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 1px;
+    }
   }
 
   &--android {
     width: 43px;
     height: 47px;
-    padding-top: 6px;
+    padding-top: 3px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 7px;
+    }
   }
 
   &--windows {
     width: 44px;
     height: 41px;
-    padding-top: 12px;
+    padding-top: 9px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 10px;
+    }
   }
 }
 
@@ -88,44 +138,9 @@
   font-weight: 300;
   text-align: center;
   color: @color-white;
-}
 
-// от 660px планшетная версия
-@media (min-width: @tablet-width) {
-  .download {
-    width: 300px;
-  }
-
-  .download__button {
-    padding: 16px 28px;
-    margin-bottom: 46px;
-  }
-
-  .download__list {
-    margin-bottom: 33px;
-  }
-
-  .download__description {
+  @media (min-width: @tablet-width) {
     width: 295px;
     font-size: 18px;
-  }
-}
-
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .download {
-    padding-top: 29px;
-    padding-bottom: 24px;
-  }
-
-  .download__button {
-    width: 258px;
-    padding: 18px;
-    margin-bottom: 67px;
-    font-size: 21px;
-  }
-
-  .download__list {
-    margin-bottom: 51px;
   }
 }

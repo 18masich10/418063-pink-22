@@ -9,6 +9,10 @@
 
 .catalog__wrapper {
   padding: 44px 0 42px;
+
+  @media (min-width: @tablet-width) {
+    padding: 92px 0 70px;
+  }
 }
 
 .catalog__slogan {
@@ -18,11 +22,34 @@
   line-height: 30px;
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+
   &--top {
     width: 250px;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 50px;
+
+    @media (min-width: @tablet-width) {
+      width: 465px;
+      padding-left: 77px;
+      padding-right: 77px;
+      margin-bottom: 77px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 636px;
+      padding-left: 152px;
+      padding-right: 152px;
+      margin-bottom: 89px;
+    }
   }
 }
 
@@ -31,27 +58,8 @@
   margin: 0;
   margin-bottom: 39px;
   list-style: none;
-}
 
-// от 660px планшетная версия
-@media (min-width: @tablet-width) {
-  .catalog__wrapper {
-    padding: 92px 0 70px;
-  }
-
-  .catalog__slogan {
-    width: 620px;
-    font-size: 18px;
-
-    &--top {
-      width: 465px;
-      padding-left: 77px;
-      padding-right: 77px;
-      margin-bottom: 77px;
-    }
-  }
-
-  .catalog__list {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 300px);
     column-gap: 20px;
@@ -59,23 +67,9 @@
     width: 620px;
     margin-bottom: 65px;
   }
-}
 
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .catalog__slogan {
+  @media (min-width: @desktop-width) {
     width: 940px;
-
-    &--top {
-      width: 636px;
-      padding-left: 152px;
-      padding-right: 152px;
-      margin-bottom: 89px;
-    }
-  }
-
-  .catalog__list {
-    width: 940px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 }

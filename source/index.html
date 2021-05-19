@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
@@ -69,8 +72,8 @@
           <p class="promo__slogan promo__slogan--index">Взгляните на жизнь иначе!</p>
 
           <picture class="promo__img">
-            <source media="(min-width: 1200px)" srcset="img/promo/promo-img-desktop.webp 1x, img/promo/promo-img-desktop@2x.webp 2x">
-            <source media="(min-width: 660px)" srcset="img/promo/promo-img-tablet.webp 1x, img/promo/promo-img-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/promo/promo-img-desktop.webp 1x, img/promo/promo-img-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/promo/promo-img-tablet.webp 1x, img/promo/promo-img-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/promo/promo-img.webp 1x, img/promo/promo-img@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/promo/promo-img-desktop.png 1x, img/promo/promo-img-desktop@2x.png 2x">
             <source media="(min-width: 660px)" srcset="img/promo/promo-img-tablet.png 1x, img/promo/promo-img-tablet@2x.png 2x">
@@ -133,8 +136,8 @@
           <div class="feature__inner">
             <picture class="feature__img">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/feature/feature-img-tablet.webp 1x, img/feature/feature-img-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/feature/feature-img.webp 1x, img/feature-img@2x.webp 2x">
-              <source media="(min-width: 660px)" srcset="img/feature/feature-img-tablet.png 1x, img/feature/feature-img-table@2x.png 2x">
+              <source type="image/webp" srcset="img/feature/feature-img.webp 1x, img/feature/feature-img@2x.webp 2x">
+              <source media="(min-width: 660px)" srcset="img/feature/feature-img-tablet.png 1x, img/feature/feature-img-tablet@2x.png 2x">
               <img class="feature__picture" src="img/feature/feature-img.png" srcset="img/feature/feature-img@2x.png 2x" width="157" height="320"
               alt="Изображение телефона с применением основных преимуществ приложения (фотография в розовых тонах, с использованием дополнительных
               смайликов и текста)">
@@ -144,7 +147,7 @@
             <ul class="feature__list feature__list--tablet">
               <li class="feature__item feature__item--good-mood">
                 <h3 class="feature__item-title">Поднимает настроение</h3>
-                <p class="feature__item-description">Приложение позволит вам победить осенную&nbsp; хандру и депрессию буквально в несколько кликов!</p>
+                <p class="feature__item-description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
               <li class="feature__item feature__item--creativity">
                 <h3 class="feature__item-title">Меняет мир вокруг</h3>
@@ -171,7 +174,7 @@
 
           <div class="aside__description">
             <h2 class="aside__title">Эффект на&nbsp;24 часа!</h2>
-            <p class="aside__text">Британские ученые провели исследования и&nbsp;доказали,<br class="aside__br-desktop"> что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
+            <p class="aside__text">Британские ученые провели исследования и&nbsp;доказали,&nbsp;<br class="aside__br-desktop">что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
 
             <a class="aside__link" href="#">Узнать больше об исследовании</a>
           </div>
@@ -336,7 +339,7 @@
               </button>
             </li>
             <li class="slider__toggle">
-              <button class="slider__toggle-button slider__button-current" type="button" aria-label="Перейти на второй слайд">
+              <button class="slider__toggle-button slider__button-current price__button-current" type="button" aria-label="Перейти на второй слайд">
                 <span class="visually-hidden">Второй слайд</span>
               </button>
             </li>

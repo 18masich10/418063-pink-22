@@ -11,6 +11,14 @@
   background-color: @bg-white;
   border: none;
   z-index: 20;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
 }
 
 .modal-show {
@@ -30,6 +38,15 @@
   top: 35%;
   bottom: auto;
   box-shadow: @modal-box-shadow;
+
+  @media (min-width: @tablet-width) {
+    top: 40%;
+    bottom: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 35%;
+  }
 }
 
 // сообщение - заявка отправлена
@@ -39,18 +56,51 @@
   top: 35%;
   bottom: auto;
   box-shadow: @modal-box-shadow;
+
+  @media (min-width: @tablet-width) {
+    top: 40%;
+    bottom: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 35%;
+  }
 }
 
 .modal__wrapper {
   width: 280px;
   margin: 0 auto;
 
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+
   &--data {
     padding: 39px 0 50px;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      padding: 39px 0 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 450px;
+      padding: 37px 0 0;
+    }
   }
 
   &--submit {
     padding: 39px 0 0;
+
+    @media (min-width: @tablet-width) {
+      width: 330px;
+      padding: 45px 0 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 450px;
+      padding: 37px 0 0;
+    }
   }
 }
 
@@ -64,6 +114,23 @@
   font-weight: 700;
   text-align: center;
   color: @color-blue-darker;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    padding: 0 20px;
+    margin-bottom: 21px;
+    font-size: 30px;
+    line-height: 40px;
+
+    &--submit {
+      padding: 0 35px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    padding: 0 25px;
+  }
 }
 
 .modal__description {
@@ -76,22 +143,66 @@
   text-align: center;
   color: @color-blue-darker;
 
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
   &--data {
     margin-bottom: 41px;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 400px;
+      padding: 0 25px;
+      margin-bottom: 63px;
+    }
   }
 
   &--submit {
     margin-bottom: 33px;
+
+    @media (min-width: @tablet-width) {
+      width: 330px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 400px;
+      padding: 0 25px;
+      margin-bottom: 39px;
+    }
   }
 }
 
 .modal__br-data {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--tablet {
+      display: none;
+    }
+  }
 }
 
 .modal__br-submit {
   &--mobile {
     display: block;
+
+    @media (min-width: @tablet-width) {
+      &--mobile {
+        display: none;
+      }
+    }
   }
 }
 
@@ -102,12 +213,31 @@
 
   &--data {
     padding: 0;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      padding: 52px 0;
+      margin-left: -165px;
+      margin-right: -165px;
+    }
   }
 
   &--submit {
     padding: 52px 0;
     margin-left: -20px;
     margin-right: -20px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: -65px;
+      margin-right: -65px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      padding: 52px 0;
+      margin-left: -165px;
+      margin-right: -165px;
+    }
   }
 }
 
@@ -128,6 +258,20 @@
   border-radius: 2px;
   border: 0;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--data {
+      width: 300px;
+    }
+
+    &--submit {
+      width: 460px;
+    }
+  }
 
   &:hover {
     background-color: @bg-btn-green-hover;
@@ -178,154 +322,5 @@
   60%,
   80% {
     transform: translateX(10px);
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .modal {
-    width: 460px;
-  }
-
-  .modal-data {
-    top: 40%;
-    bottom: auto;
-  }
-
-  .modal-submit {
-    top: 40%;
-    bottom: auto;
-  }
-
-  .modal__wrapper {
-    margin: 0 auto;
-
-    &--data {
-      width: 300px;
-      padding: 39px 0 52px;
-    }
-
-    &--submit {
-      width: 330px;
-      padding: 45px 0 0;
-    }
-  }
-
-  .modal__title {
-    width: 260px;
-    padding: 0 20px;
-    margin-bottom: 21px;
-    font-size: 30px;
-    line-height: 40px;
-
-    &--submit {
-      padding: 0 35px;
-    }
-  }
-
-  .modal__description {
-    font-size: 18px;
-
-    &--data {
-      width: 300px;
-      margin-bottom: 35px;
-    }
-
-    &--submit {
-      width: 330px;
-      margin-bottom: 30px;
-    }
-  }
-
-  .modal__br-data {
-    &--tablet {
-      display: block;
-    }
-  }
-
-  .modal__br-submit {
-    &--mobile {
-      display: none;
-    }
-  }
-
-  .modal__button-bg {
-    &--submit {
-      margin-left: -65px;
-      margin-right: -65px;
-    }
-  }
-
-  .modal__button {
-    width: 300px;
-  }
-}
-
-// от 1200px десктопная версия
-@media (min-width: @desktop-width) {
-  .modal {
-    width: 780px;
-  }
-
-  .modal-data {
-    top: 35%;
-  }
-
-  .modal-submit {
-    top: 35%;
-  }
-
-  .modal__wrapper {
-    &--data,
-    &--submit {
-      width: 450px;
-      padding: 37px 0 0;
-    }
-  }
-
-  .modal__title {
-    width: 400px;
-    padding: 0 25px;
-  }
-
-  .modal__description {
-    &--data,
-    &--submit {
-      width: 400px;
-      padding: 0 25px;
-    }
-
-    &--data {
-      margin-bottom: 63px;
-    }
-
-    &--submit {
-      margin-bottom: 39px;
-    }
-  }
-
-  .modal__br-data {
-    &--tablet {
-      display: none;
-    }
-  }
-
-  .modal__button-bg {
-    &--data,
-    &--submit {
-      display: block;
-      padding: 52px 0;
-      margin-left: -165px;
-      margin-right: -165px;
-    }
-  }
-
-  .modal__button {
-    &--data {
-      width: 300px;
-    }
-
-    &--submit {
-      width: 460px;
-    }
   }
 }
