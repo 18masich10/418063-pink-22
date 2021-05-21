@@ -42,13 +42,14 @@
   margin-right: -20px;
   margin-bottom: 24px;
   overflow-y: hidden;
+  overflow-x: scroll;
 
   @media (min-width: @tablet-width) {
     width: 620px;
     height: 222px;
     margin: 0;
     margin-bottom: 0;
-    overflow-y: inherit;
+    overflow: inherit;
   }
 
   @media (min-width: @desktop-width) {
@@ -60,12 +61,14 @@
 .price__list {
   position: absolute;
   display: block;
-  width: 836px;
+  width: 100%;
+  margin: 0 0 0 -261px;
 
   @media (min-width: @tablet-width) {
     display: block;
     width: 620px;
     border: 1px solid @border-gray-lighter;
+    margin: 0;
 
     tbody {
       background-color: @bg-white;
@@ -88,13 +91,13 @@
 
   @media (min-width: @tablet-width) {
     border: 0;
-    border-top: 2px solid @border-gray-light;
     border-right: 2px solid @border-gray-light;
+    border-bottom: 2px solid @border-gray-light;
     border-left: 2px solid @border-gray-light;
 
     &:first-child {
       border: 0;
-      border-right: 2px solid @border-gray-light;
+      border-bottom: 2px solid @border-gray-light;
     }
 
     &:last-child {
@@ -131,9 +134,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 231px;
+    //width: 231px;
+    width: 232px;
     padding: 16px 0 21px 1px;
     font-size: 18px;
+    border: 1px solid @border-white;
+    border-bottom: 0;
   }
 
   &--mobile-invisible {
@@ -187,8 +193,8 @@
   z-index: 6;
 
   @media (min-width: @tablet-width) {
-    top: 15px;
-    left: -36px;
+    top: 14px;
+    left: -38px;
     height: 20px;
   }
 
@@ -230,7 +236,7 @@
   &--mobile-opened {
     display: block;
     width: 237px;
-    padding: 11px 18px 16px;
+    padding: 12px 19px 15px;
     font-size: 14px;
     text-align: left;
     text-transform: uppercase;
@@ -253,14 +259,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 230px;
+    //width: 230px;
+    width: 231px;
   }
 
   &--selected::after {
     position: absolute;
     content: " ";
-    top: 16px;
-    left: 230px;
+    top: 18px;
+    left: 228px;
     width: 31px;
     height: 21px;
     background-image: url("../img/custom-icons/yes.svg");

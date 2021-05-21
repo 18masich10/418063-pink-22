@@ -1,0 +1,21 @@
+// Style.less для блока modal-submit
+//----------------------------------
+
+// Cообщение - заявка отправлена
+
+.modal-submit {
+  display: none; // временно
+  position: fixed;
+  top: 35%;
+  bottom: auto;
+  box-shadow: @modal-box-shadow;
+
+  @media (min-width: @tablet-width) {
+    top: 40%;
+    bottom: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 35%;
+  }
+}
