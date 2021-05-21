@@ -2,10 +2,37 @@
 //-----------------------------
 
 .contacts {
+  position: relative;
   display: block;
   padding: 0;
   margin: 0;
   background-color: @bg-white;
+
+  &::after {
+    position: absolute;
+    top: 408px;
+    content: " ";
+    width: 100%;
+    height: 35px;
+    background-image: url("../img/contacts/triangle.png");
+    background-position: bottom;
+    background-size: 100% 115px;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      top: 404px;
+      height: 68px;
+      background-size: 100% 245px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 365px;
+      width: 100%;
+      height: 103px;
+      background-size: 100% 375px;
+    }
+  }
 }
 
 .contacts__wrapper {
@@ -157,7 +184,6 @@
   }
 }
 
-
 .contacts__tel-link,
 .contacts__email-link {
   @media (min-width: @tablet-width) {
@@ -229,24 +255,20 @@
 
   &::after {
     position: absolute;
-    top: -2px;
+    top: 95px;
     content: " ";
-    width: 100%;
-    height: 35px;
-    background-image: url("../img/contacts/triangle.png");
-    background-position: bottom;
-    background-size: 100% 35px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/custom-icons/map-marker.svg");
     background-repeat: no-repeat;
     z-index: 1;
 
     @media (min-width: @tablet-width) {
-      height: 68px;
-      background-size: 100% 68px;
+      top: 193px;
     }
 
     @media (min-width: @desktop-width) {
-      height: 103px;
-      background-size: 100% 103px;
+      top: 258px;
     }
   }
 
@@ -266,6 +288,8 @@
     }
 
     @media (min-width: @tablet-width) {
+      top: -1px;
+      left: -1px;
       height: 374px;
       background-image: url("../img/contacts/map-tablet.jpg");
       background-position: 50% 0;
@@ -278,6 +302,7 @@
     }
 
     @media (min-width: @desktop-width) {
+      top: -6px;
       height: 502px;
       background-image: url("../img/contacts/map-desktop.jpg");
       background-position: 0 0;
@@ -295,7 +320,7 @@
   width: 100%;
   height: 200px;
   border: 0;
-  z-index: 0;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     height: 374px;

@@ -83,14 +83,14 @@
 
           <!-- promo download -->
           <div class="download">
-            <a class="download__button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
+            <a class="download__button" href="#">Скачать приложение</a>
 
             <!-- download device logo/ список девайсов для скачивания -->
             <ul class="download__list">
 
               <!--  download device item -->
               <li class="download__item">
-                <a class="download__link" href="#">
+                <a class="download__link" href="https://www.apple.com/ru/app-store/">
                   <svg class="download__icon download__icon--iphone" width="47" height="56">
                     <use xlink:href="img/sprite.svg#apple-icon"></use>
                   </svg>
@@ -100,7 +100,7 @@
 
               <!--  download device item -->
               <li class="download__item">
-                <a class="download__link" href="#">
+                <a class="download__link" href="https://play.google.com/store/apps">
                   <svg class="download__icon download__icon--android" width="43" height="47">
                     <use xlink:href="img/sprite.svg#android-icon"></use>
                   </svg>
@@ -110,7 +110,7 @@
 
               <!--  download device item -->
               <li class="download__item">
-                <a class="download__link" href="#">
+                <a class="download__link" href="https://www.microsoft.com/ru-ru/store/apps/windows">
                   <svg class="download__icon download__icon--windows" width="44" height="41">
                     <use xlink:href="img/sprite.svg#microsoft-icon"></use>
                   </svg>
@@ -269,17 +269,17 @@
       <!-- section reviews end -->
       <!-- section price -->
       <section class="price">
-        <div class="price__wrapper slider container">
+        <div class="price__wrapper container">
           <h2 class="visually-hidden">Стоимость пакета опций</h2>
 
           <!-- price slider/ таблица тарифов - слайдер -->
-          <div class="price__slider">
+          <div class="price__slider" id="slider">
             <table class="price__list">
               <tr class="price__row">
                 <th class="price__tariff price__tariff--mobile-invisible"></th>
-                <th class="price__tariff slider__element" id="basa">База<span>1,99 usd</span></th>
-                <th class="price__tariff price__hit slider__element slider__element--current" id="standart">Стандарт<span>3,99 usd</span></th>
-                <th class="price__tariff slider__element" id="anlim">Анлим<span>9,99 usd</span></th>
+                <th class="price__tariff slider__element">База<span>1,99 usd</span></th>
+                <th class="price__tariff price__hit slider__element slider__element--current">Стандарт<span>3,99 usd</span></th>
+                <th class="price__tariff slider__element">Анлим<span>9,99 usd</span></th>
               </tr>
               <tr class="price__row">
                 <td class="price__option price__option--mobile-invisible">Розовый фильтр</td>
@@ -450,5 +450,7 @@
     <script src="js/main-nav.js"></script>
     <!-- скрипт, отвечающий за слайдер с отзывами пользователя -->
     <script src="js/reviews-slider.js"></script>
+    <!-- скрипт, отвечающий за слайдер с тарифным планом приложения -->
+    <script src="js/price-slider.js"></script>
   </body>
 </html>
